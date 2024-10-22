@@ -3,52 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\ebbez\\CloudMonomers\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|C:\\Users\\ebbez\\CloudMonomers\\plycpp.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|solutionrelative:plycpp.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|C:\\Users\\ebbez\\CloudMonomers\\PLY.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|solutionrelative:PLY.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|C:\\Users\\ebbez\\CloudMonomers\\MonomerSeparator.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|solutionrelative:MonomerSeparator.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|C:\\Users\\ebbez\\CloudMonomers\\Monomer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|solutionrelative:Monomer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|C:\\Users\\ebbez\\CloudMonomers\\HandlerPLY.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|solutionrelative:HandlerPLY.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|C:\\Users\\ebbez\\CloudMonomers\\Geometry.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|solutionrelative:Geometry.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|C:\\Users\\ebbez\\CloudMonomers\\plycpp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|solutionrelative:plycpp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|C:\\Users\\ebbez\\CloudMonomers\\PLY.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|solutionrelative:PLY.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|C:\\Users\\ebbez\\CloudMonomers\\MonomerSeparator.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|solutionrelative:MonomerSeparator.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|C:\\Users\\ebbez\\CloudMonomers\\HandlerPLY.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|solutionrelative:HandlerPLY.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|C:\\Users\\ebbez\\CloudMonomers\\Monomer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|solutionrelative:Monomer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|C:\\Users\\ebbez\\CloudMonomers\\HandlerPLY.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|solutionrelative:HandlerPLY.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|C:\\Users\\ebbez\\CloudMonomers\\HandlerPLY.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|solutionrelative:HandlerPLY.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|C:\\Users\\ebbez\\CloudMonomers\\CloudMonomers.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|solutionrelative:CloudMonomers.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|C:\\Users\\ebbez\\CloudMonomers\\Monomer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|solutionrelative:Monomer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|C:\\Users\\ebbez\\CloudMonomers\\Geometry.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|solutionrelative:Geometry.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|C:\\Users\\ebbez\\CloudMonomers\\CloudMonomers.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|solutionrelative:CloudMonomers.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|C:\\Users\\ebbez\\CloudMonomers\\MonomerSeparator.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BB3CB35D-7D45-4769-91F4-AA3CDD73A8C0}|CloudMonomers.vcxproj|solutionrelative:MonomerSeparator.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,136 +46,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Monomer.h",
-              "DocumentMoniker": "C:\\Users\\ebbez\\CloudMonomers\\Monomer.h",
-              "RelativeDocumentMoniker": "Monomer.h",
-              "ToolTip": "C:\\Users\\ebbez\\CloudMonomers\\Monomer.h",
-              "RelativeToolTip": "Monomer.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-17T16:05:14.044Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MonomerSeparator.cpp",
-              "DocumentMoniker": "C:\\Users\\ebbez\\CloudMonomers\\MonomerSeparator.cpp",
-              "RelativeDocumentMoniker": "MonomerSeparator.cpp",
-              "ToolTip": "C:\\Users\\ebbez\\CloudMonomers\\MonomerSeparator.cpp",
-              "RelativeToolTip": "MonomerSeparator.cpp",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "CloudMonomers.cpp",
+              "DocumentMoniker": "C:\\Users\\ebbez\\CloudMonomers\\CloudMonomers.cpp",
+              "RelativeDocumentMoniker": "CloudMonomers.cpp",
+              "ToolTip": "C:\\Users\\ebbez\\CloudMonomers\\CloudMonomers.cpp",
+              "RelativeToolTip": "CloudMonomers.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-17T14:59:19.489Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-05T07:32:01.753Z",
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Monomer.cpp",
-              "DocumentMoniker": "C:\\Users\\ebbez\\CloudMonomers\\Monomer.cpp",
-              "RelativeDocumentMoniker": "Monomer.cpp",
-              "ToolTip": "C:\\Users\\ebbez\\CloudMonomers\\Monomer.cpp",
-              "RelativeToolTip": "Monomer.cpp",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAEYAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "PLY.cpp",
+              "DocumentMoniker": "C:\\Users\\ebbez\\CloudMonomers\\PLY.cpp",
+              "RelativeDocumentMoniker": "PLY.cpp",
+              "ToolTip": "C:\\Users\\ebbez\\CloudMonomers\\PLY.cpp",
+              "RelativeToolTip": "PLY.cpp",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAFAAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-17T14:57:20.495Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "HandlerPLY.cpp",
-              "DocumentMoniker": "C:\\Users\\ebbez\\CloudMonomers\\HandlerPLY.cpp",
-              "RelativeDocumentMoniker": "HandlerPLY.cpp",
-              "ToolTip": "C:\\Users\\ebbez\\CloudMonomers\\HandlerPLY.cpp",
-              "RelativeToolTip": "HandlerPLY.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-05T11:16:19.994Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MonomerSeparator.h",
-              "DocumentMoniker": "C:\\Users\\ebbez\\CloudMonomers\\MonomerSeparator.h",
-              "RelativeDocumentMoniker": "MonomerSeparator.h",
-              "ToolTip": "C:\\Users\\ebbez\\CloudMonomers\\MonomerSeparator.h",
-              "RelativeToolTip": "MonomerSeparator.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-17T10:23:02.714Z",
+              "WhenOpened": "2024-10-22T18:24:29.727Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "plycpp.cpp",
-              "DocumentMoniker": "C:\\Users\\ebbez\\CloudMonomers\\plycpp.cpp",
-              "RelativeDocumentMoniker": "plycpp.cpp",
-              "ToolTip": "C:\\Users\\ebbez\\CloudMonomers\\plycpp.cpp",
-              "RelativeToolTip": "plycpp.cpp",
-              "ViewState": "AgIAAJcAAAAAAAAAAAAAAJcAAAAYAAAAAAAAAA==",
+              "Title": "Monomer.h",
+              "DocumentMoniker": "C:\\Users\\ebbez\\CloudMonomers\\Monomer.h",
+              "RelativeDocumentMoniker": "Monomer.h",
+              "ToolTip": "C:\\Users\\ebbez\\CloudMonomers\\Monomer.h",
+              "RelativeToolTip": "Monomer.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-17T16:05:14.044Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HandlerPLY.cpp",
+              "DocumentMoniker": "C:\\Users\\ebbez\\CloudMonomers\\HandlerPLY.cpp",
+              "RelativeDocumentMoniker": "HandlerPLY.cpp",
+              "ToolTip": "C:\\Users\\ebbez\\CloudMonomers\\HandlerPLY.cpp",
+              "RelativeToolTip": "HandlerPLY.cpp",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAQwBsAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-17T13:21:46.082Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "plycpp.h",
-              "DocumentMoniker": "C:\\Users\\ebbez\\CloudMonomers\\plycpp.h",
-              "RelativeDocumentMoniker": "plycpp.h",
-              "ToolTip": "C:\\Users\\ebbez\\CloudMonomers\\plycpp.h",
-              "RelativeToolTip": "plycpp.h",
-              "ViewState": "AgIAAIQAAAAAAAAAAAAAAJgAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-17T13:18:58.324Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Geometry.cpp",
-              "DocumentMoniker": "C:\\Users\\ebbez\\CloudMonomers\\Geometry.cpp",
-              "RelativeDocumentMoniker": "Geometry.cpp",
-              "ToolTip": "C:\\Users\\ebbez\\CloudMonomers\\Geometry.cpp",
-              "RelativeToolTip": "Geometry.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-17T16:05:03.949Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PLY.h",
-              "DocumentMoniker": "C:\\Users\\ebbez\\CloudMonomers\\PLY.h",
-              "RelativeDocumentMoniker": "PLY.h",
-              "ToolTip": "C:\\Users\\ebbez\\CloudMonomers\\PLY.h",
-              "RelativeToolTip": "PLY.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-05T10:34:55.59Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Geometry.h",
-              "DocumentMoniker": "C:\\Users\\ebbez\\CloudMonomers\\Geometry.h",
-              "RelativeDocumentMoniker": "Geometry.h",
-              "ToolTip": "C:\\Users\\ebbez\\CloudMonomers\\Geometry.h",
-              "RelativeToolTip": "Geometry.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-17T13:18:40.964Z",
+              "WhenOpened": "2024-10-05T11:16:19.994Z",
               "EditorCaption": ""
             },
             {
@@ -198,23 +108,58 @@
               "RelativeDocumentMoniker": "HandlerPLY.h",
               "ToolTip": "C:\\Users\\ebbez\\CloudMonomers\\HandlerPLY.h",
               "RelativeToolTip": "HandlerPLY.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-05T07:33:04.121Z",
+              "WhenOpened": "2024-10-05T07:33:04.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Monomer.cpp",
+              "DocumentMoniker": "C:\\Users\\ebbez\\CloudMonomers\\Monomer.cpp",
+              "RelativeDocumentMoniker": "Monomer.cpp",
+              "ToolTip": "C:\\Users\\ebbez\\CloudMonomers\\Monomer.cpp",
+              "RelativeToolTip": "Monomer.cpp",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-17T14:57:20.495Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MonomerSeparator.cpp",
+              "DocumentMoniker": "C:\\Users\\ebbez\\CloudMonomers\\MonomerSeparator.cpp",
+              "RelativeDocumentMoniker": "MonomerSeparator.cpp",
+              "ToolTip": "C:\\Users\\ebbez\\CloudMonomers\\MonomerSeparator.cpp",
+              "RelativeToolTip": "MonomerSeparator.cpp",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAABgAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-17T14:59:19.489Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CloudMonomers.cpp",
-              "DocumentMoniker": "C:\\Users\\ebbez\\CloudMonomers\\CloudMonomers.cpp",
-              "RelativeDocumentMoniker": "CloudMonomers.cpp",
-              "ToolTip": "C:\\Users\\ebbez\\CloudMonomers\\CloudMonomers.cpp",
-              "RelativeToolTip": "CloudMonomers.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABdAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "MonomerSeparator.h",
+              "DocumentMoniker": "C:\\Users\\ebbez\\CloudMonomers\\MonomerSeparator.h",
+              "RelativeDocumentMoniker": "MonomerSeparator.h",
+              "ToolTip": "C:\\Users\\ebbez\\CloudMonomers\\MonomerSeparator.h",
+              "RelativeToolTip": "MonomerSeparator.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-17T10:23:02.714Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Geometry.cpp",
+              "DocumentMoniker": "C:\\Users\\ebbez\\CloudMonomers\\Geometry.cpp",
+              "RelativeDocumentMoniker": "Geometry.cpp",
+              "ToolTip": "C:\\Users\\ebbez\\CloudMonomers\\Geometry.cpp",
+              "RelativeToolTip": "Geometry.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-05T07:32:01.753Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T16:05:03.949Z"
             }
           ]
         }

@@ -1,8 +1,8 @@
 #include "Monomer.h"
 #include <stdexcept>
 #include <cmath>
-#include <iostream>
 #include <unordered_set>
+#include <iostream>
 
 using namespace std;
 
@@ -13,40 +13,9 @@ Monomer::Monomer(const vector<Vertex>& verts) : vertices(verts) {
     centrVertex = calculateCenter(verts);
 }
 
-Monomer::Monomer(const vector<Face>& faces, const vector<Vertex>& vertices) {
-    this->vertices = extractVerticesFromFaces(faces, vertices);
-    if (this->vertices.size() < 3) {
-        throw runtime_error("Not enough vertices after extracting from faces");
-    }
-    centrVertex = calculateCenter(this->vertices);
-}
-
-vector<Vertex> Monomer::extractVerticesFromFaces(const vector<Face>& faces, const vector<Vertex>& vertices) {
-    unordered_set<int> uniqueVertices;
-    vector<Vertex> monomerVertices;
-
-    for (const Face& face : faces) {
-        if (uniqueVertices.insert(face.v1).second) {
-            monomerVertices.push_back(vertices[face.v1]);
-        }
-        if (uniqueVertices.insert(face.v2).second) {
-            monomerVertices.push_back(vertices[face.v2]);
-        }
-        if (uniqueVertices.insert(face.v3).second) {
-            monomerVertices.push_back(vertices[face.v3]);
-        }
-    }
-
-    if (monomerVertices.size() < 4) {
-        return {}; 
-    }
-
-    return monomerVertices;
-}
-
 double Monomer::calculateVolume() const {
     double volume = 0.0;
-    Vertex center = calculateCenter(vertices);  
+    Vertex center = calculateCenter(vertices);
 
     for (size_t i = 0; i < vertices.size() - 2; ++i) {
         Vertex v0 = vertices[0];
@@ -66,7 +35,7 @@ double Monomer::calculateVolume() const {
         volume += dotProduct;
     }
 
-    return abs(volume / 6.0); 
+    return abs(volume / 6.0);
 }
 
 Vertex Monomer::calculateCenter(const vector<Vertex>& vertices) const {
@@ -82,3 +51,25 @@ Vertex Monomer::calculateCenter(const vector<Vertex>& vertices) const {
 
     return center;
 }
+
+vector<Vertex> Monomer::extractVerticesFromFaces(const vector<Face>& faces, const vector<Vertex>& vertices) {
+    unordered_set<int> uniqueVertices;
+    vector<Vertex> monomerVertices;
+
+    for (const Face& face : faces) {
+        cout << vertices[face.v1].x << vertices[face.v1].y << vertices[face.v1].z << endl;
+        // Додаємо унікальні вершини, використовуючи індекси фейсів
+        if (uniqueVertices.insert(face.v1).second) {
+            monomerVertices.push_back(vertices[face.v1]);
+        }
+        if (uniqueVertices.insert(face.v2).second) {
+            monomerVertices.push_back(vertices[face.v2]);
+        }
+        if (uniqueVertices.insert(face.v3).second) {
+            monomerVertices.push_back(vertices[face.v3]);
+        }
+    }
+
+    return monomerVertices;
+}
+

@@ -3,6 +3,12 @@
 #include <iostream>
 #include <stdexcept>
 
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <string>
+#include <sstream>
+
 using namespace std;
 using namespace plycpp;
 
@@ -32,6 +38,21 @@ vector<Vertex> PLY::getVertices() const {
         }
     }
 
+    std::ifstream file(fileName);
+    std::string line;
+    bool header = true;
+    while (getline(file, line)) {
+        if (header) {
+            if (line == "end_header") {
+                header = false;  
+            }
+            else {
+                cout << line << endl;
+            }
+        }
+
+    }
+
     return vertices;
 }
 
@@ -46,6 +67,7 @@ vector<Face> PLY::getFaces() const {
         auto plyFace = plyData["face"];
         auto faceProperty = plyFace->properties["vertex_indices"];
 
+        int I = 0;
 
         for (size_t i = 0; i < plyFace->size(); ++i) {
             Face face;
@@ -55,6 +77,11 @@ vector<Face> PLY::getFaces() const {
             face.v3 = faceProperty->at<uint32_t>(i * 3 + 2);
 
             faces.push_back(face);
+
+            I++;
+            if (I < 100) {
+                cout << face.v1 << "   " << face.v2 << "   " << face.v3 << endl;
+            }
         }
     }
 
