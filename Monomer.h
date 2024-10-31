@@ -2,15 +2,15 @@
 #include <vector>
 #include <unordered_set>
 #include "Geometry.h"
+#include "BoundingBox.h"
 
 using namespace std;
 
 class Monomer {
 public:
-    Monomer(const vector<Vertex>& verts);           
-    Monomer(const vector<Face>& faces, const vector<Vertex>& vertices); 
-    double calculateVolume() const;        
-    vector<Vertex> extractVerticesFromFaces(const vector<Face>& faces, const vector<Vertex>& vertices); 
+    Monomer(const vector<Vertex>& vertices);
+    double calculateVolume() const;  
+    double calculateClippedVolume(const BoundingBox& box) const;
 
 private:
     vector<Vertex> vertices;                      

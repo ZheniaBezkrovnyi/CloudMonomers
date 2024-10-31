@@ -4,16 +4,30 @@
 using namespace std;
 
 int main() {
-    //string fileName = "C:/All/Diploma/PLY/Example/layer_octahedra_dense.ply";
-    //string fileName = "C:/All/Diploma/PLY/Example/GRF Size 12-14 Margin 2 density025.ply";
-    //string fileName = "C:/All/Diploma/PLY/Example/layer_tetrahedra.ply";
-    //string fileName = "C:/All/Diploma/PLY/Example/Cubes Size 12-14 Margin 05-4 density038.ply";
-    string fileName = "C:/All/Diploma/PLY/Example/GRF Size 12-14 Margin 1-6 density023ply.ply";
+    vector<std::string> fileNames = {
+        "C:/All/Diploma/PLY/Example/Cubes Size 12-14 Margin 1-7 density026 .ply",
+        "C:/All/Diploma/PLY/Example/Cubes Size 12-14 Margin 05-4 density038.ply",
+        "C:/All/Diploma/PLY/Example/GRF Size 12-14 Margin 1-6 density023ply.ply",
+        "C:/All/Diploma/PLY/Example/GRF Size 12-14 Margin 2 density025.ply",
+        "C:/All/Diploma/PLY/Example/GRF Size 14 Margin 02 density045.ply",
+        "C:/All/Diploma/PLY/Example/GRF Size 14 Margin 05 density037.ply",
+        "C:/All/Diploma/PLY/Example/layer cubes.ply",
+        "C:/All/Diploma/PLY/Example/layer octahedra.ply",
+        "C:/All/Diploma/PLY/Example/layer_octahedra_dense.ply",
+        "C:/All/Diploma/PLY/Example/layer_tetrahedra.ply",
+    };
+    //"C:/All/Diploma/PLY/Example/GRF Size 14 Margin 1 density031.ply",
+    //"C:/All/Diploma/PLY/Example/icosphere_1.ply",
 
+    for (const auto& fileName : fileNames) {
 
+        for (float i = 0.95; i < 1; i += 0.01) {
+            HandlerPLY handler(fileName);
+            handler.processManuallyBounds(i);
+        }
 
-    HandlerPLY handler(fileName);  // Створення об'єкта HandlerPLY з назвою файлу
-    handler.process();  // Виклик методу process для обробки PLY файлу
+        cout << "Processing file: " << fileName << std::endl;
+    }
 
     return 0;
 }

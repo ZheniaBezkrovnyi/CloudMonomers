@@ -4,5 +4,7 @@
 
 class MonomerSeparator {
 public:
-    std::vector<std::vector<Face>> separateMonomers(const std::vector<Face>& faces);
+    void addNeighbors(std::vector<Vertex>& vertices, const Face& face);
+
+    void dfs(int v, std::vector<bool>& visited, const std::vector<Vertex>& vertices, std::unordered_set<int>& component);
 };

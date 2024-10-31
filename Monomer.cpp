@@ -13,37 +13,6 @@ Monomer::Monomer(const vector<Vertex>& verts) : vertices(verts) {
     centrVertex = calculateCenter(verts);
 }
 
-Monomer::Monomer(const vector<Face>& faces, const vector<Vertex>& vertices) {
-    this->vertices = extractVerticesFromFaces(faces, vertices);
-    if (this->vertices.size() < 3) {
-        throw runtime_error("Not enough vertices after extracting from faces");
-    }
-    centrVertex = calculateCenter(this->vertices);
-}
-
-vector<Vertex> Monomer::extractVerticesFromFaces(const vector<Face>& faces, const vector<Vertex>& vertices) {
-    unordered_set<int> uniqueVertices;
-    vector<Vertex> monomerVertices;
-
-    for (const Face& face : faces) {
-        if (uniqueVertices.insert(face.v1).second) {
-            monomerVertices.push_back(vertices[face.v1]);
-        }
-        if (uniqueVertices.insert(face.v2).second) {
-            monomerVertices.push_back(vertices[face.v2]);
-        }
-        if (uniqueVertices.insert(face.v3).second) {
-            monomerVertices.push_back(vertices[face.v3]);
-        }
-    }
-
-    if (monomerVertices.size() < 4) {
-        return {}; 
-    }
-
-    return monomerVertices;
-}
-
 double Monomer::calculateVolume() const {
     double volume = 0.0;
     Vertex center = calculateCenter(vertices);  
@@ -67,6 +36,17 @@ double Monomer::calculateVolume() const {
     }
 
     return abs(volume / 6.0); 
+}
+
+double Monomer::calculateClippedVolume(const BoundingBox& box) const {
+    int insideCount = 0;
+
+    for (const auto& vertex : vertices) {
+        if (insideBox(vertex, box))
+            insideCount++;
+    }
+
+    return insideCount / vertices.size() * calculateVolume();
 }
 
 Vertex Monomer::calculateCenter(const vector<Vertex>& vertices) const {

@@ -25,6 +25,8 @@ vector<Vertex> PLY::getVertices() const {
 
         for (size_t i = 0; i < plyVertex->size(); ++i) {
             Vertex vertex;
+            vertex.index = i;
+
             vertex.x = vertexProperties[0]->at<float>(i);
             vertex.y = vertexProperties[1]->at<float>(i);
             vertex.z = vertexProperties[2]->at<float>(i);
@@ -45,7 +47,7 @@ vector<Face> PLY::getFaces() const {
     if (plyData.has_key("face")) {
         auto plyFace = plyData["face"];
         auto faceProperty = plyFace->properties["vertex_indices"];
-
+        int I = 0;
 
         for (size_t i = 0; i < plyFace->size(); ++i) {
             Face face;
@@ -56,6 +58,8 @@ vector<Face> PLY::getFaces() const {
 
             faces.push_back(face);
         }
+
+
     }
 
     return faces;

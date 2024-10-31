@@ -1,2 +1,4 @@
-﻿  HandlerPLY.cpp
+﻿  CloudMonomers.cpp
+C:\Users\ebbez\CloudMonomers\CloudMonomers.cpp(24,22): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\ebbez\CloudMonomers\CloudMonomers.cpp(24,42): warning C4305: '+=': truncation from 'double' to 'float'
   CloudMonomers.vcxproj -> C:\Users\ebbez\CloudMonomers\x64\Debug\CloudMonomers.exe

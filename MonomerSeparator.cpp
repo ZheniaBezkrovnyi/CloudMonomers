@@ -4,28 +4,21 @@
 
 using namespace std;
 
-vector<vector<Face>> MonomerSeparator::separateMonomers(const vector<Face>& faces) {
-    vector<vector<Face>> monomers;  
-    vector<Face> currentMonomer;   
 
-    for (size_t i = 0; i < faces.size(); ++i) {
-        const Face& face = faces[i];
-
-        if (face.v1 + 1 == face.v2 && face.v2 + 1 == face.v3) {
-            if (!currentMonomer.empty() && currentMonomer.size() >= 4) {
-                monomers.push_back(currentMonomer);
-            }
-            if (!currentMonomer.empty()) {
-                currentMonomer.clear();
-            }
+void MonomerSeparator::addNeighbors(std::vector<Vertex>& vertices, const Face& face) {
+    vertices[face.v1].neighbors.insert(face.v2);
+    vertices[face.v1].neighbors.insert(face.v3);
+    vertices[face.v2].neighbors.insert(face.v1);
+    vertices[face.v2].neighbors.insert(face.v3);
+    vertices[face.v3].neighbors.insert(face.v1);
+    vertices[face.v3].neighbors.insert(face.v2);
+}
+void MonomerSeparator::dfs(int vertexIndex, std::vector<bool>& visited, const std::vector<Vertex>& vertices, std::unordered_set<int>& component) {
+    visited[vertexIndex] = true;
+    component.insert(vertexIndex);
+    for (int neighbor : vertices[vertexIndex].neighbors) {
+        if (!visited[neighbor]) {
+            dfs(neighbor, visited, vertices, component);
         }
-
-        currentMonomer.push_back(face);
     }
-
-    if (!currentMonomer.empty() && currentMonomer.size() >= 4) {
-        monomers.push_back(currentMonomer);
-    }
-
-    return monomers;
 }

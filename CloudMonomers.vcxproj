@@ -127,17 +127,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BoundingBox.cpp" />
     <ClCompile Include="CloudMonomers.cpp" />
     <ClCompile Include="Geometry.cpp" />
     <ClCompile Include="HandlerPLY.cpp" />
+    <ClCompile Include="HandlerString.cpp" />
     <ClCompile Include="Monomer.cpp" />
     <ClCompile Include="MonomerSeparator.cpp" />
     <ClCompile Include="PLY.cpp" />
     <ClCompile Include="plycpp.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BoundingBox.h" />
     <ClInclude Include="Geometry.h" />
     <ClInclude Include="HandlerPLY.h" />
+    <ClInclude Include="HandlerString.h" />
     <ClInclude Include="Monomer.h" />
     <ClInclude Include="MonomerSeparator.h" />
     <ClInclude Include="PLY.h" />
