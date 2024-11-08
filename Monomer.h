@@ -8,12 +8,12 @@ using namespace std;
 
 class Monomer {
 public:
-    Monomer(const vector<Vertex>& vertices, const vector<Face>& faces);
-    double calculateVolume() const;  
-    double calculateClippedVolume(const BoundingBox& box) const;
+    Monomer(const vector<Vertex>& innerVerts, const vector<Face>& faces);
+    double calculateVolume(const vector<Vertex>& vertices) const;
+    double calculateClippedVolume(const vector<Vertex>& vertices, const BoundingBox& box) const;
 
 private:
-    vector<Vertex> vertices; 
+    vector<Vertex> innerVertices;
     vector<Face> faces;
     Vertex centrVertex;                          
 

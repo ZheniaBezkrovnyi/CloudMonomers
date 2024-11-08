@@ -16,6 +16,12 @@ void HandlerPLY::processManuallyBounds(const float& procentBoundingBox) const {
         PLY ply(_fileName);
         vector<Vertex> vertices = ply.getVertices();
         vector<Face> faces = ply.getFaces();
+        for (int i = 0; i < 100; ++i) {
+            //cout << faces[i].v1 << "   " << faces[i].v2 << "   " << faces[i].v3 << endl;
+        }
+        for (int i = 0; i < 100; ++i) {
+            cout << vertices[i].x << "   " << vertices[i].y << "   " << vertices[i].z << endl;
+        }
 
         if (vertices.empty() || faces.empty()) {
             cerr << "No vertices or faces found in PLY file." << endl;
@@ -30,15 +36,13 @@ void HandlerPLY::processManuallyBounds(const float& procentBoundingBox) const {
 
         vector<bool> visited(vertices.size(), false);
         vector<Monomer> monomers;
-        cout << 1000 << "asdf" << endl;
+
         int a = 0;
         for (int i = 0; i < vertices.size(); ++i) {
             if (!visited[i]) {
                 unordered_set<int> component;
                 set<int> faceIndexSet;
                 separator.dfs(i, visited, vertices, faces, component, faceIndexSet);
-                a++;
-                cout << a << "   " << component.size() << "   " << faceIndexSet.size() << endl;
 
                 vector<Vertex> dividedVertices;
                 for (int idx : component) {
@@ -48,38 +52,40 @@ void HandlerPLY::processManuallyBounds(const float& procentBoundingBox) const {
                 vector<Face> dividedFaces;
                 for (int idx : faceIndexSet) {
                     dividedFaces.push_back(faces[idx]);
+
+                    //cout << faces[idx].v1 << "   " << faces[idx].v2 << "   " << faces[idx].v3 << endl;
                 }
+                //cout << "-----------" << endl;
 
                 monomers.emplace_back(dividedVertices, dividedFaces);
             }
         }
-        cout << 1000 << "asdf" << endl;
-        //cout << a << "asdf" << endl;
 
         double sumVolumeMonomers = 0.0;
         double sumVolumeCommon = 0.0;
 
         BoundingBox bB = findBoundingBox(vertices) * procentBoundingBox;
-        cout << 1001 << "asdf" << endl;
         sumVolumeCommon = findVolume(bB);
-        cout << 1002 << "asdf" << endl;
+
         for (size_t i = 0; i < monomers.size(); ++i) {
-            if (i < 100) {
-                sumVolumeMonomers += monomers[i].calculateClippedVolume(bB);
-            }
+            //if (i < 100) {
+                sumVolumeMonomers += monomers[i].calculateClippedVolume(vertices, bB);
+            //}
         }
-        cout << 1003 << "asdf" << endl;
+        cout << sumVolumeMonomers << " sumVolumeMonomers" << endl;
+        cout << sumVolumeCommon << " sumVolumeCommon" << endl;
+        cout << (sumVolumeMonomers / sumVolumeCommon * 100) << " %" << endl;
         cout << getNameFile(_fileName) + "-" + to_string(static_cast<int>(procentBoundingBox * 100)) + ".txt" << endl;
-        ofstream outFile(getNameFile(_fileName) + "-" + to_string(static_cast<int>(procentBoundingBox*100)) + ".txt");
+        /*ofstream outFile(getNameFile(_fileName) + "-" + to_string(static_cast<int>(procentBoundingBox * 100)) + ".txt");
         if (!outFile) {
             cerr << "Cannot open file for writing." << endl;
             return;
         }
         outFile << (sumVolumeMonomers / sumVolumeCommon * 100) << " %" << endl;
-        /*for (size_t i = 0; i < monomers.size(); ++i) {
+        for (size_t i = 0; i < monomers.size(); ++i) {
             outFile << "Monomer Index: " << i << "  volume: " << monomers[i].calculateClippedVolume(bB) << endl;
-        }*/
-        outFile.close();
+        }
+        outFile.close();*/
     }
     catch (const exception& e) {
         cerr << "Error: " << e.what() << endl;
