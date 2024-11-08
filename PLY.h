@@ -1,8 +1,9 @@
 #pragma once
 #include <string>
 #include <vector>
+#include <typeindex>
 #include "Geometry.h"
-#include "plycpp.h"  
+#include "plycpp.h"
 
 using namespace std;
 
@@ -13,5 +14,6 @@ public:
     vector<Face> getFaces() const;
 
 private:
-    string fileName; 
+    string fileName;
+    mutable type_index typeIndex = typeid(void);
 };

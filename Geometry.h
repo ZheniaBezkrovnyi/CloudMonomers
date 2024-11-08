@@ -11,9 +11,10 @@ struct Vertex {
     int index;
 
     float x, y, z;
-    std::set<int> neighbors;
+    set<int> neighbors;
+    set<int> faceIndices;
 };
 
 struct Face {
-    int32_t v1, v2, v3;
+    int v1, v2, v3;
 };

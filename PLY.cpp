@@ -6,34 +6,26 @@
 using namespace std;
 using namespace plycpp;
 
-PLY::PLY(const string& file) : fileName(file) {}
+PLY::PLY(const string& file) : fileName(file), typeIndex(typeid(void)) {}
 
 
 vector<Vertex> PLY::getVertices() const {
     PLYData plyData;
-    load(fileName, plyData);  
+    load(fileName, plyData);
 
     vector<Vertex> vertices;
-
-    if (plyData.has_key("vertex")) {
-        auto plyVertex = plyData["vertex"];
-        vector<shared_ptr<const PropertyArray>> vertexProperties = {
-            plyVertex->properties["x"],
-            plyVertex->properties["y"],
-            plyVertex->properties["z"]
-        };
-
-        for (size_t i = 0; i < plyVertex->size(); ++i) {
-            Vertex vertex;
-            vertex.index = i;
-
-            vertex.x = vertexProperties[0]->at<float>(i);
-            vertex.y = vertexProperties[1]->at<float>(i);
-            vertex.z = vertexProperties[2]->at<float>(i);
-            vertices.push_back(vertex);
+    for (const auto& element : plyData) {
+        if (element.key == "vertex") {
+            auto plyVertex = element.data;
+            for (size_t i = 0; i < plyVertex->size(); i += 3) {
+                Vertex vertex;
+                vertex.x = plyVertex->properties["x"]->at<float>(i);
+                vertex.y = plyVertex->properties["y"]->at<float>(i + 1);
+                vertex.z = plyVertex->properties["z"]->at<float>(i + 2);
+                vertices.push_back(vertex);
+            }
         }
     }
-
     return vertices;
 }
 
@@ -43,23 +35,39 @@ vector<Face> PLY::getFaces() const {
     load(fileName, plyData);
 
     vector<Face> faces;
-
-    if (plyData.has_key("face")) {
-        auto plyFace = plyData["face"];
-        auto faceProperty = plyFace->properties["vertex_indices"];
-        int I = 0;
-
-        for (size_t i = 0; i < plyFace->size(); ++i) {
-            Face face;
-
-            face.v1 = faceProperty->at<uint32_t>(i * 3 + 0);
-            face.v2 = faceProperty->at<uint32_t>(i * 3 + 1);
-            face.v3 = faceProperty->at<uint32_t>(i * 3 + 2);
-
-            faces.push_back(face);
+    for (const auto& element : plyData) {
+        for (const auto& prop : element.data->properties)
+        {
+            if (prop.key == string("vertex_indices")) {  typeIndex = prop.data->type;  }
         }
+    }
+    for (const auto& element : plyData) {
+        if (element.key == "face") {
+            auto plyFace = plyData["face"];
+            auto faceProperty = plyFace->properties["vertex_indices"];
+            int I = 0;
 
+            bool isUnsigned = typeIndex.name() == string("unsigned int");
 
+            for (size_t i = 0; i < plyFace->size(); i+=3) {
+                Face face;
+
+                if (isUnsigned) {
+                    face.v1 = faceProperty->at<unsigned int>(i + 0);
+                    face.v2 = faceProperty->at<unsigned int>(i + 1);
+                    face.v3 = faceProperty->at<unsigned int>(i + 2);
+                }
+                else {
+                    face.v1 = faceProperty->at<int>(i + 0);
+                    face.v2 = faceProperty->at<int>(i + 1);
+                    face.v3 = faceProperty->at<int>(i + 2);
+                }
+
+                if (true) {
+                    faces.push_back(face);
+                }
+            }
+        }
     }
 
     return faces;

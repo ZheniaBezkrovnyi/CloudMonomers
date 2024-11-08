@@ -11,7 +11,7 @@ public:
     void processManuallyBounds(const float& procentBoundingBox) const;
     std::vector<Monomer> createMonomers(
         const std::vector<std::unordered_set<int>>& clusters, 
-        const std::vector<Vertex>& globalVertices) const;
+        const std::vector<Vertex>& globalVertices, const vector<Face>& globalFaces) const;
 
 private:
     std::string _fileName;
