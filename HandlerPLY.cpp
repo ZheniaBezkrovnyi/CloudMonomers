@@ -15,7 +15,9 @@ void HandlerPLY::processManuallyBounds(const float& procentBoundingBox) const {
     try {
         PLY ply(_fileName);
         vector<Vertex> vertices = ply.getVertices();
+        cout << 1 << endl;
         vector<Face> faces = ply.getFaces();
+        cout << 2 << endl;
 
         if (vertices.empty() || faces.empty()) {
             cerr << "No vertices or faces found in PLY file." << endl;
@@ -27,9 +29,7 @@ void HandlerPLY::processManuallyBounds(const float& procentBoundingBox) const {
         for (const auto& face : faces) {
             separator.addNeighbors(vertices, face, indexFace++);
         }
-        if (vertices.size() > indexFace) {
-            vertices.resize(indexFace - 1);
-        }
+
         vector<bool> visited(vertices.size(), false);
         vector<Monomer> monomers;
 
@@ -42,21 +42,29 @@ void HandlerPLY::processManuallyBounds(const float& procentBoundingBox) const {
         for (int i = 0; i < vertices.size(); ++i) {
             if (!visited[i]) {
        
-                unordered_set<int> component;
-                set<int> faceIndexSet;     
+                unordered_set<int> vertIndexSet;
+                set<int> faceIndexSet;
 
-                separator.dfs(i, visited, vertices, faces, component, faceIndexSet);
-        
+                separator.dfs(i, visited, vertices, faces, vertIndexSet, faceIndexSet);
+
                 vector<Vertex> dividedVertices;
                 a++;
-        
+
                 outFile << "" << endl;
                 outFile << "Component " << a << endl;
                 outFile << "Vects: " << endl;
-                for (int idx : component) {
-                    dividedVertices.push_back(vertices[idx]);
 
+                Vertex vLast = vertices[0];
+                for (int idx : vertIndexSet) {
+                    dividedVertices.push_back(vertices[idx]);
+                    float distance = std::sqrt(
+                        std::pow(vertices[idx].x - vLast.x, 2) +
+                        std::pow(vertices[idx].y - vLast.y, 2) +
+                        std::pow(vertices[idx].z - vLast.z, 2)
+                    );
+                    vLast = vertices[idx];
                     outFile << vertices[idx].x << "   " << vertices[idx].y << "   " << vertices[idx].z << endl;
+                    outFile << distance << endl;
                 }
                 if (dividedVertices.size() < 3) break;
                 outFile << "" << endl;

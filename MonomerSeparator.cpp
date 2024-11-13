@@ -6,10 +6,6 @@ using namespace std;
 
 
 void MonomerSeparator::addNeighbors(vector<Vertex>& vertices, const Face& face, int faceIndex) {
-    int vCount = vertices.size();
-    if (face.v1 >= vCount || face.v2 >= vCount || face.v3 >= vCount)
-        return;
-
     vertices[face.v1].neighbors.insert(face.v2);
     vertices[face.v1].neighbors.insert(face.v3);
     vertices[face.v2].neighbors.insert(face.v1);
