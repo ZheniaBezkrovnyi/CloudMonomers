@@ -16,50 +16,63 @@ void HandlerPLY::processManuallyBounds(const float& procentBoundingBox) const {
         PLY ply(_fileName);
         vector<Vertex> vertices = ply.getVertices();
         vector<Face> faces = ply.getFaces();
-        for (int i = 0; i < 100; ++i) {
-            //cout << faces[i].v1 << "   " << faces[i].v2 << "   " << faces[i].v3 << endl;
-        }
-        for (int i = 0; i < 100; ++i) {
-            cout << vertices[i].x << "   " << vertices[i].y << "   " << vertices[i].z << endl;
-        }
 
         if (vertices.empty() || faces.empty()) {
             cerr << "No vertices or faces found in PLY file." << endl;
             return;
         }
-        MonomerSeparator separator;
 
+        MonomerSeparator separator;
         int indexFace = 0;
         for (const auto& face : faces) {
             separator.addNeighbors(vertices, face, indexFace++);
         }
-
+        if (vertices.size() > indexFace) {
+            vertices.resize(indexFace - 1);
+        }
         vector<bool> visited(vertices.size(), false);
         vector<Monomer> monomers;
 
         int a = 0;
+        ofstream outFile(getNameFile(_fileName) + "-" + to_string(static_cast<int>(procentBoundingBox * 100)) + "components.txt");
+        if (!outFile) {
+            cerr << "Cannot open file for writing." << endl;
+            return;
+        }
         for (int i = 0; i < vertices.size(); ++i) {
             if (!visited[i]) {
+       
                 unordered_set<int> component;
-                set<int> faceIndexSet;
-                separator.dfs(i, visited, vertices, faces, component, faceIndexSet);
+                set<int> faceIndexSet;     
 
+                separator.dfs(i, visited, vertices, faces, component, faceIndexSet);
+        
                 vector<Vertex> dividedVertices;
+                a++;
+        
+                outFile << "" << endl;
+                outFile << "Component " << a << endl;
+                outFile << "Vects: " << endl;
                 for (int idx : component) {
                     dividedVertices.push_back(vertices[idx]);
-                }
 
+                    outFile << vertices[idx].x << "   " << vertices[idx].y << "   " << vertices[idx].z << endl;
+                }
+                if (dividedVertices.size() < 3) break;
+                outFile << "" << endl;
+        
                 vector<Face> dividedFaces;
+                outFile << "Faces: " << endl;
                 for (int idx : faceIndexSet) {
                     dividedFaces.push_back(faces[idx]);
 
-                    //cout << faces[idx].v1 << "   " << faces[idx].v2 << "   " << faces[idx].v3 << endl;
+                    outFile << faces[idx].v1 << "   " << faces[idx].v2 << "   " << faces[idx].v3 << endl;
                 }
-                //cout << "-----------" << endl;
 
                 monomers.emplace_back(dividedVertices, dividedFaces);
             }
         }
+        outFile.close();
 
         double sumVolumeMonomers = 0.0;
         double sumVolumeCommon = 0.0;
@@ -71,7 +84,7 @@ void HandlerPLY::processManuallyBounds(const float& procentBoundingBox) const {
             //if (i < 100) {
                 sumVolumeMonomers += monomers[i].calculateClippedVolume(vertices, bB);
             //}
-        }
+        } 
         cout << sumVolumeMonomers << " sumVolumeMonomers" << endl;
         cout << sumVolumeCommon << " sumVolumeCommon" << endl;
         cout << (sumVolumeMonomers / sumVolumeCommon * 100) << " %" << endl;

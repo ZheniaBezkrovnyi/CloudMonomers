@@ -1,2 +1,5 @@
 ﻿  HandlerPLY.cpp
+  PLY.cpp
+C:\Users\ebbez\CloudMonomers\PLY.cpp(20,22): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
   CloudMonomers.vcxproj -> C:\Users\ebbez\CloudMonomers\x64\Debug\CloudMonomers.exe

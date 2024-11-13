@@ -6,8 +6,8 @@ using namespace std;
 int main() {
     vector<std::string> fileNames = {
         "C:/All/Diploma/PLY/Example/Cubes Size 12-14 Margin 1-7 density026_ascii.ply",
-        //"C:/All/Diploma/PLY/Example/Cubes Size 12-14 Margin 05-4 density038.ply",
-        /*"C:/All/Diploma/PLY/Example/GRF Size 12-14 Margin 1-6 density023ply.ply",
+        /*"C:/All/Diploma/PLY/Example/Cubes Size 12-14 Margin 05-4 density038.ply",
+        "C:/All/Diploma/PLY/Example/GRF Size 12-14 Margin 1-6 density023ply.ply",
         "C:/All/Diploma/PLY/Example/GRF Size 12-14 Margin 2 density025.ply",
         "C:/All/Diploma/PLY/Example/GRF Size 14 Margin 02 density045.ply",
         "C:/All/Diploma/PLY/Example/GRF Size 14 Margin 05 density037.ply",
