@@ -27,6 +27,22 @@ struct BoundingBox {
 
         return result;
     }
+    BoundingBox transformByAxis(float minX = 0,float maxX = 1, float minY = 0, float maxY = 1, float minZ = 0, float maxZ = 1) {
+        BoundingBox result;
+        float width = maxVertex.x - minVertex.x;
+        float height = maxVertex.y - minVertex.y;
+        float depth = maxVertex.z - minVertex.z;
+
+        result.minVertex.x = minVertex.x + width * minX;
+        result.minVertex.y = minVertex.y + height * minY;
+        result.minVertex.z = minVertex.z + depth * minZ;
+
+        result.maxVertex.x = minVertex.x + width * maxX;
+        result.maxVertex.y = minVertex.y + height * maxY;
+        result.maxVertex.z = minVertex.z + depth * maxZ;
+
+        return result;
+    }
 };
 
 BoundingBox findBoundingBox(const std::vector<Vertex>& vertices);

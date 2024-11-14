@@ -19,7 +19,6 @@ vector<Vertex> PLY::getVertices() const {
             auto plyVertex = element.data;
             int size = plyVertex->size();
 
-            cout << size << endl;
             for (size_t i = 0; i < size; i++) {
 
                 Vertex vertex;

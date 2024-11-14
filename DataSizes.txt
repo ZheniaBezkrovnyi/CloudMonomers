@@ -1,0 +1,47 @@
+18252  faces
+36504  verts
+Cubes Size 12-14 Margin 1-7 density026_ascii.ply
+
+16952  faces
+101712  verts
+Cubes Size 12-14 Margin 05-4 density038.ply
+
+150531  faces
+235795  verts
+GRF Size 12-14 Margin 1-6 density023ply.ply
+
+179978  faces
+281967  verts
+GRF Size 12-14 Margin 2 density025.ply
+
+210302  faces
+329453  verts
+GRF Size 14 Margin 02 density045.ply
+
+211794  faces
+331692  verts
+GRF Size 14 Margin 05 density037.ply
+
+4000  faces
+8000  verts
+layer cubes.ply
+
+2133  faces
+4800  verts
+layer octahedra.ply
+
+3760  faces
+8460  verts
+layer_octahedra_dense.ply
+
+2000  faces
+6000  verts
+layer_tetrahedra.ply
+
+180325  faces
+282484  verts
+GRF Size 14 Margin 1 density031.ply
+
+26  faces
+42  verts
+icosphere_1.ply

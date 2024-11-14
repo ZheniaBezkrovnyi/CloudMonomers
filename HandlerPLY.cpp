@@ -16,7 +16,7 @@ void HandlerPLY::processManuallyBounds(const float& procentBoundingBox) const {
         PLY ply(_fileName);
         vector<Vertex> vertices = ply.getVertices();
         vector<Face> faces = ply.getFaces();
-        cout << faces.size() << endl;
+        cout << faces.size() << "  faces" << endl;
         if (vertices.empty() || faces.empty()) {
             cerr << "No vertices or faces found in PLY file." << endl;
             return;
@@ -30,8 +30,8 @@ void HandlerPLY::processManuallyBounds(const float& procentBoundingBox) const {
 
         vector<bool> visited(vertices.size(), false);
         vector<Monomer> monomers;
-        cout << vertices.size() << "  a" << faces.size() << endl;
-        int a = 0;
+        cout << vertices.size() << "  verts" << endl;
+        /*int a = 0;
         ofstream outFile(getNameFile(_fileName) + "-" + to_string(static_cast<int>(procentBoundingBox * 100)) + "components.txt");
 
         if (!outFile) {
@@ -61,7 +61,6 @@ void HandlerPLY::processManuallyBounds(const float& procentBoundingBox) const {
                 monomers.emplace_back(dividedVertices, dividedFaces);
             }
         }
-        cout << a << "  a" << endl;
         outFile.close();
 
         double sumVolumeMonomers = 0.0;
@@ -69,14 +68,14 @@ void HandlerPLY::processManuallyBounds(const float& procentBoundingBox) const {
 
         BoundingBox bB = findBoundingBox(vertices) * procentBoundingBox;
         sumVolumeCommon = findVolume(bB);
-        cout << monomers.size() << endl;
+        cout << monomers.size() << "  monomers" << endl;
         for (size_t i = 0; i < monomers.size(); ++i) {
             sumVolumeMonomers += monomers[i].calculateClippedVolume(vertices, bB);
         }
-        cout << sumVolumeMonomers << " sumVolumeMonomers" << endl;
-        cout << sumVolumeCommon << " sumVolumeCommon" << endl;
-        cout << (sumVolumeMonomers / sumVolumeCommon * 100) << " %" << endl;
-        cout << getNameFile(_fileName) + "-" + to_string(static_cast<int>(procentBoundingBox * 100)) + ".txt" << endl;
+        //cout << sumVolumeMonomers << " sumVolumeMonomers" << endl;
+        //cout << sumVolumeCommon << " sumVolumeCommon" << endl;
+        //cout << (sumVolumeMonomers / sumVolumeCommon * 100) << " %" << endl;
+        //cout << getNameFile(_fileName) + "-" + to_string(static_cast<int>(procentBoundingBox * 100)) + ".txt" << endl;
         ofstream outFile2(getNameFile(_fileName) + "-" + to_string(static_cast<int>(procentBoundingBox * 100)) + ".txt");
         if (!outFile2) {
             cerr << "Cannot open file for writing." << endl;
@@ -86,7 +85,7 @@ void HandlerPLY::processManuallyBounds(const float& procentBoundingBox) const {
         for (size_t i = 0; i < monomers.size(); ++i) {
             outFile2 << "Monomer Index: " << i << "  volume: " << monomers[i].calculateClippedVolume(vertices, bB) << endl;
         }
-        outFile2.close();
+        outFile2.close();*/
     }
     catch (const exception& e) {
         cerr << "Error: " << e.what() << endl;
