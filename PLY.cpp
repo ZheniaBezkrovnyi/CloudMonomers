@@ -19,12 +19,15 @@ vector<Vertex> PLY::getVertices() const {
             auto plyVertex = element.data;
             int size = plyVertex->size();
 
+            cout << size << endl;
             for (size_t i = 0; i < size; i++) {
 
                 Vertex vertex;
                 vertex.x = plyVertex->properties["x"]->at<float>(i);
                 vertex.y = plyVertex->properties["y"]->at<float>(i);
                 vertex.z = plyVertex->properties["z"]->at<float>(i);
+
+                //cout << vertex.x << "   " << vertex.y << "   " << vertex.z << "   " << endl;
                 vertices.push_back(vertex);
             }
         }
@@ -54,7 +57,7 @@ vector<Face> PLY::getFaces() const {
 
             bool isUnsigned = typeIndex.name() == string("unsigned int");
 
-            for (size_t i = 0; i + 2 < plyFace->size(); i += 3) {
+            for (int i = 0; i + 2 < plyFace->size(); i += 3) {
                 Face face;
                 if (isUnsigned) {
                     face.v1 = static_cast<int>(faceProperty->at<unsigned int>(i));
@@ -66,6 +69,7 @@ vector<Face> PLY::getFaces() const {
                     face.v2 = faceProperty->at<int>(i + 1);
                     face.v3 = faceProperty->at<int>(i + 2);
                 }
+
                 faces.push_back(face);
             }
         }

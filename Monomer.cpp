@@ -13,41 +13,35 @@ Monomer::Monomer(const vector<Vertex>& innerVerts, const vector<Face>& faces) : 
     centrVertex = calculateCenter(innerVerts);
 }
 
-double Monomer::calculateVolume(const vector<Vertex>& vertices) const {
+double Monomer::calculateVolume(const std::vector<Vertex>& vertices) const {
     double volume = 0.0;
-    for (const Face& face : faces) {
+
+    for (const auto& face : faces) {
         Vertex v0 = vertices[face.v1];
         Vertex v1 = vertices[face.v2];
         Vertex v2 = vertices[face.v3];
 
-        //cout << face.v1 << "   " << face.v2 << "   " << face.v3 << endl;
-        /*cout << "_verticles.Add(new Vector3(" << v0.x << "f, " << v0.y << "f, " << v0.z << "f));" << endl;
-        cout << "_verticles.Add(new Vector3(" << v1.x << "f, " << v1.y << "f, " << v1.z << "f));" << endl;
-        cout << "_verticles.Add(new Vector3(" << v2.x << "f, " << v2.y << "f, " << v2.z << "f));" << endl;*/
+        Vertex ab = v1 - v0;
+        Vertex ac = v2 - v0;
 
-        Vertex normal = {
-            (v1.y - v0.y) * (v2.z - v0.z) - (v1.z - v0.z) * (v2.y - v0.y),
-            (v1.z - v0.z) * (v2.x - v0.x) - (v1.x - v0.x) * (v2.z - v0.z),
-            (v1.x - v0.x) * (v2.y - v0.y) - (v1.y - v0.y) * (v2.x - v0.x)
-        };
+        Vertex crossProduct;
+        crossProduct.x = ab.y * ac.z - ab.z * ac.y;
+        crossProduct.y = ab.z * ac.x - ab.x * ac.z;
+        crossProduct.z = ab.x * ac.y - ab.y * ac.x;
 
-        Vertex centroid = {
-            (v0.x + v1.x + v2.x) / 3,
-            (v0.y + v1.y + v2.y) / 3,
-            (v0.z + v1.z + v2.z) / 3
-        };
+        double dotProduct = v0.x * crossProduct.x + v0.y * crossProduct.y + v0.z * crossProduct.z;
 
-        Vertex diff = {
-            centroid.x - centrVertex.x,
-            centroid.y - centrVertex.y,
-            centroid.z - centrVertex.z
-        };
+        volume += dotProduct / 6.0;
 
-        double contribution = (diff.x * normal.x + diff.y * normal.y + diff.z * normal.z) / 6.0;
-        volume += contribution;
-    }       //cout << "//------------" << endl;
-    return abs(volume);
+    }
+    return volume;
 }
+
+
+
+
+
+
 
 double Monomer::calculateClippedVolume(const vector<Vertex>& vertices, const BoundingBox& box) const {
     int insideCount = 0;
@@ -56,8 +50,7 @@ double Monomer::calculateClippedVolume(const vector<Vertex>& vertices, const Bou
         if (insideBox(vertex, box))
             insideCount++;
     }
-    //cout << (float)insideCount / vertices.size() * calculateVolume(vertices) << "volume" << endl;
-    return (float)insideCount / vertices.size() * calculateVolume(vertices);
+    return (float)insideCount / innerVertices.size() * calculateVolume(vertices);
 }
 
 Vertex Monomer::calculateCenter(const vector<Vertex>& vertices) const {
