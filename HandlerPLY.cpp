@@ -82,6 +82,11 @@ int HandlerPLY::processManuallyBounds() const {
         cout << (_sumVolumeMonomers / _sumVolumeCommon * 100) << " % Main" << endl;
         outFile << (_sumVolumeMonomers / _sumVolumeCommon * 100) << " %" << endl;
         outFile << endl;
+
+
+
+
+
         
 
         int side =  5;

@@ -22,6 +22,12 @@ struct Vertex {
 
         return result;
     }
+    bool operator==(const Vertex& other) const {
+        if (x == other.x && y == other.y && z == other.z) {
+            return true;
+        }
+        return false;
+    }
 };
 
 struct Face {

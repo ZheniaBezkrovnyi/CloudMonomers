@@ -39,10 +39,6 @@ double Monomer::calculateVolume(const std::vector<Vertex>& vertices) const {
 
 
 
-
-
-
-
 double Monomer::calculateClippedVolume(const vector<Vertex>& vertices, const BoundingBox& box) const {
     int insideCount = 0;
 
@@ -53,6 +49,14 @@ double Monomer::calculateClippedVolume(const vector<Vertex>& vertices, const Bou
 
     return (float)insideCount / innerVertices.size() * calculateVolume(vertices);
 }
+void Monomer::Destroy() {
+    for (Monomer* neighbor : neighborMonomers) {
+        neighbor->neighborMonomers.erase(this);
+    }
+}
+
+
+
 
 Vertex Monomer::calculateCenter(const vector<Vertex>& vertices) const {
     Vertex center = { 0.0, 0.0, 0.0 };
@@ -66,4 +70,18 @@ Vertex Monomer::calculateCenter(const vector<Vertex>& vertices) const {
     center.z /= vertices.size();
 
     return center;
+}
+
+
+void Monomer::calculateNeighborMonomers(const unordered_set<Monomer*>& monomers) {
+    for (Monomer* monomer : monomers) {
+        if (this == monomer) continue;
+
+        for (const auto& vertex : innerVertices) {
+            if (find(monomer->innerVertices.begin(), monomer->innerVertices.end(), vertex) != monomer->innerVertices.end()) {
+                neighborMonomers.insert(monomer); 
+                break;
+            }
+        }
+    }
 }
