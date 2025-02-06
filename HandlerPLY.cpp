@@ -6,20 +6,22 @@
 #include <fstream>
 #include "BoundingBox.h"
 #include "HandlerString.h"
+#include <iomanip>
 
 using namespace std;
 
 HandlerPLY::HandlerPLY(const string& fileName) : _fileName(fileName) {}
 
-void HandlerPLY::processManuallyBounds(const float& procentBoundingBox) const {
+int HandlerPLY::processManuallyBounds() const {
     try {
         PLY ply(_fileName);
         vector<Vertex> vertices = ply.getVertices();
         vector<Face> faces = ply.getFaces();
         cout << faces.size() << "  faces" << endl;
+        cout << vertices.size() << "  verts" << endl;
         if (vertices.empty() || faces.empty()) {
             cerr << "No vertices or faces found in PLY file." << endl;
-            return;
+            return 0;
         }
 
         MonomerSeparator separator;
@@ -30,25 +32,16 @@ void HandlerPLY::processManuallyBounds(const float& procentBoundingBox) const {
 
         vector<bool> visited(vertices.size(), false);
         vector<Monomer> monomers;
-        cout << vertices.size() << "  verts" << endl;
-        /*int a = 0;
-        ofstream outFile(getNameFile(_fileName) + "-" + to_string(static_cast<int>(procentBoundingBox * 100)) + "components.txt");
 
-        if (!outFile) {
-            cerr << "Cannot open file for writing." << endl;
-            return;
-        }
+
         for (int i = 0; i < vertices.size(); i++) {
-            outFile << vertices[i].neighbors.size() << endl;
             if (!visited[i]) {
-                //outFile << i << endl;
                 unordered_set<int> vertIndexSet;
                 set<int> faceIndexSet;
 
                 separator.dfs(i, visited, vertices, faces, vertIndexSet, faceIndexSet);
 
                 vector<Vertex> dividedVertices;
-                a++;
 
                 Vertex vLast = vertices[0];
                 for (int idx : vertIndexSet) {  dividedVertices.push_back(vertices[idx]); }
@@ -61,33 +54,104 @@ void HandlerPLY::processManuallyBounds(const float& procentBoundingBox) const {
                 monomers.emplace_back(dividedVertices, dividedFaces);
             }
         }
-        outFile.close();
 
-        double sumVolumeMonomers = 0.0;
-        double sumVolumeCommon = 0.0;
+        ofstream outFile(getNameFile(_fileName) + "_divided.txt");
 
-        BoundingBox bB = findBoundingBox(vertices) * procentBoundingBox;
-        sumVolumeCommon = findVolume(bB);
-        cout << monomers.size() << "  monomers" << endl;
-        for (size_t i = 0; i < monomers.size(); ++i) {
-            sumVolumeMonomers += monomers[i].calculateClippedVolume(vertices, bB);
-        }
-        //cout << sumVolumeMonomers << " sumVolumeMonomers" << endl;
-        //cout << sumVolumeCommon << " sumVolumeCommon" << endl;
-        //cout << (sumVolumeMonomers / sumVolumeCommon * 100) << " %" << endl;
-        //cout << getNameFile(_fileName) + "-" + to_string(static_cast<int>(procentBoundingBox * 100)) + ".txt" << endl;
-        ofstream outFile2(getNameFile(_fileName) + "-" + to_string(static_cast<int>(procentBoundingBox * 100)) + ".txt");
-        if (!outFile2) {
+        if (!outFile) {
             cerr << "Cannot open file for writing." << endl;
-            return;
+            return 0;
         }
-        outFile2 << (sumVolumeMonomers / sumVolumeCommon * 100) << " %" << endl;
+        outFile << faces.size() << "  faces" << endl;
+        outFile << vertices.size() << "  verts" << endl;
+        //
+        double _sumVolumeMonomers = 0.0;
+        double _sumVolumeCommon = 0.0;
+        outFile << monomers.size() << "  monomers" << endl;
+        outFile << endl;
+        outFile << endl;
+        BoundingBox _bB = findBoundingBox(vertices).transformByAxis(0, 1, 0, 1, 0, 1);
+
+        _sumVolumeCommon = findVolume(_bB);
+
+
         for (size_t i = 0; i < monomers.size(); ++i) {
-            outFile2 << "Monomer Index: " << i << "  volume: " << monomers[i].calculateClippedVolume(vertices, bB) << endl;
+            _sumVolumeMonomers += monomers[i].calculateClippedVolume(vertices, _bB);
         }
-        outFile2.close();*/
+        //cout << monomers[1].innerVertices.size() << endl;
+
+        cout << (_sumVolumeMonomers / _sumVolumeCommon * 100) << " % Main" << endl;
+        outFile << (_sumVolumeMonomers / _sumVolumeCommon * 100) << " %" << endl;
+        outFile << endl;
+        
+
+        int side =  5;
+
+        outFile << "X" << endl;
+        for (int x = 0; x < side; x += 1) {
+            float minX = (float)x / side, maxX = (float)(x + 1) / side;
+
+            double sumVolumeMonomers = 0.0;
+            double sumVolumeCommon = 0.0;
+
+            BoundingBox bB = findBoundingBox(vertices).transformByAxis(minX, maxX, 0, 1, 0, 1);
+            sumVolumeCommon = findVolume(bB);
+
+            for (size_t i = 0; i < monomers.size(); ++i) {
+                sumVolumeMonomers += monomers[i].calculateClippedVolume(vertices, bB);
+            }
+            float porous = sumVolumeMonomers / sumVolumeCommon * 100;
+            cout << porous << " %" << endl;
+
+            outFile << porous << " %" << endl;
+            outFile << endl;
+        }
+        ///////
+
+        outFile << "Y" << endl;
+        for (int y = 0; y < side; y += 1) {
+            float minY = (float)y / side, maxY = (float)(y + 1) / side;
+
+            double sumVolumeMonomers = 0.0;
+            double sumVolumeCommon = 0.0;
+
+            BoundingBox bB = findBoundingBox(vertices).transformByAxis(0, 1, minY, maxY, 0, 1);
+            sumVolumeCommon = findVolume(bB);
+
+            for (size_t i = 0; i < monomers.size(); ++i) {
+                sumVolumeMonomers += monomers[i].calculateClippedVolume(vertices, bB);
+            }
+            float porous = sumVolumeMonomers / sumVolumeCommon * 100;
+            cout << porous << " %" << endl;
+
+            outFile << porous << " %" << endl;
+            outFile << endl;
+        }
+        //////////////
+
+        outFile << "Z" << endl;
+        for (int z = 0; z < side; z += 1) {
+            float minZ = (float)z / side, maxZ = (float)(z + 1) / side;
+
+            double sumVolumeMonomers = 0.0;
+            double sumVolumeCommon = 0.0;
+
+            BoundingBox bB = findBoundingBox(vertices).transformByAxis(0, 1, 0, 1, minZ, maxZ);
+            sumVolumeCommon = findVolume(bB);
+
+            for (size_t i = 0; i < monomers.size(); ++i) {
+                sumVolumeMonomers += monomers[i].calculateClippedVolume(vertices, bB);
+            }
+            float porous = sumVolumeMonomers / sumVolumeCommon * 100;
+            cout << porous << " %" << endl;
+
+            outFile << porous << " %" << endl;
+            outFile << endl;
+        }
+        outFile.close();
     }
     catch (const exception& e) {
         cerr << "Error: " << e.what() << endl;
     }
+
+    return 0;
 }

@@ -21,10 +21,10 @@ void MonomerSeparator::addNeighbors(vector<Vertex>& vertices, const Face& face, 
 }
 
 void MonomerSeparator::dfs(int vertexIndex, vector<bool>& visited, const vector<Vertex>& vertices, const vector<Face>& faces, unordered_set<int>& component, set<int>& faceIndices) {
-    if (visited[vertexIndex]) return; // Вихід, якщо вже відвідано
+    if (visited[vertexIndex]) return;
 
-    visited[vertexIndex] = true; // Позначаємо вершину як відвідану
-    component.insert(vertexIndex); // Додаємо вершину до компоненту
+    visited[vertexIndex] = true; 
+    component.insert(vertexIndex); 
 
     for (int neighbor : vertices[vertexIndex].neighbors) {
         if (!visited[neighbor]) {

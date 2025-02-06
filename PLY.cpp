@@ -52,16 +52,19 @@ vector<Face> PLY::getFaces() const {
         if (element.key == "face") {
             auto plyFace = plyData["face"];
             auto faceProperty = plyFace->properties["vertex_indices"];
-            int I = 0;
 
             bool isUnsigned = typeIndex.name() == string("unsigned int");
 
-            for (int i = 0; i + 2 < plyFace->size(); i += 3) {
+            cout << plyFace->size() << "plyFace->size()" << endl;
+
+            for (int i = 0; i + 2 < faceProperty->size(); i += 3) {
                 Face face;
                 if (isUnsigned) {
                     face.v1 = static_cast<int>(faceProperty->at<unsigned int>(i));
                     face.v2 = static_cast<int>(faceProperty->at<unsigned int>(i + 1));
                     face.v3 = static_cast<int>(faceProperty->at<unsigned int>(i + 2));
+
+                    //cout << face.v1 << "   " << face.v2 << "   " << face.v3 << "   " << endl;
                 }
                 else {
                     face.v1 = faceProperty->at<int>(i);

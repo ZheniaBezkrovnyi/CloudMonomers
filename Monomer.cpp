@@ -50,6 +50,7 @@ double Monomer::calculateClippedVolume(const vector<Vertex>& vertices, const Bou
         if (insideBox(vertex, box))
             insideCount++;
     }
+
     return (float)insideCount / innerVertices.size() * calculateVolume(vertices);
 }
 
