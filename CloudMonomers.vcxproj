@@ -136,6 +136,9 @@
     <ClCompile Include="MonomerSeparator.cpp" />
     <ClCompile Include="PLY.cpp" />
     <ClCompile Include="plycpp.cpp" />
+    <ClCompile Include="Point.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="Sphere.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BoundingBox.h" />
@@ -146,6 +149,9 @@
     <ClInclude Include="MonomerSeparator.h" />
     <ClInclude Include="PLY.h" />
     <ClInclude Include="plycpp.h" />
+    <ClInclude Include="Point.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="Sphere.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
