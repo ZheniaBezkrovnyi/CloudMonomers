@@ -1,0 +1,548 @@
+
+Removed spheres: 0
+Cluster Size, Average Coordination Number
+1, 0
+29995, 7.19107
+
+Removed spheres: 1000
+Cluster Size, Average Coordination Number
+1, 0
+28995, 6.95203
+
+Removed spheres: 2000
+Cluster Size, Average Coordination Number
+1, 0
+27995, 6.70948
+
+Removed spheres: 3000
+Cluster Size, Average Coordination Number
+1, 0
+26994, 6.47122
+
+Removed spheres: 4000
+Cluster Size, Average Coordination Number
+1, 0
+25993, 6.23168
+
+Removed spheres: 5000
+Cluster Size, Average Coordination Number
+1, 0
+24993, 5.98408
+
+Removed spheres: 6000
+Cluster Size, Average Coordination Number
+1, 0
+3, 1.33333
+23991, 5.75874
+
+Removed spheres: 7000
+Cluster Size, Average Coordination Number
+1, 0
+22986, 5.52188
+
+Removed spheres: 8000
+Cluster Size, Average Coordination Number
+1, 0
+21987, 5.28649
+
+Removed spheres: 9000
+Cluster Size, Average Coordination Number
+1, 0
+2, 1
+20970, 5.03062
+
+Removed spheres: 10000
+Cluster Size, Average Coordination Number
+1, 0
+2, 1
+19965, 4.80501
+
+Removed spheres: 11000
+Cluster Size, Average Coordination Number
+1, 0
+2, 1
+4, 2.5
+18937, 4.58161
+
+Removed spheres: 12000
+Cluster Size, Average Coordination Number
+1, 0
+2, 1
+5, 2
+17917, 4.34124
+
+Removed spheres: 13000
+Cluster Size, Average Coordination Number
+1, 0
+2, 1
+3, 1.33333
+4, 2
+5, 1.6
+9, 2.44444
+16857, 4.10915
+
+Removed spheres: 14000
+Cluster Size, Average Coordination Number
+1, 0
+2, 1
+3, 1.33333
+4, 1.5
+7, 2.85714
+8, 2.25
+15822, 3.85501
+
+Removed spheres: 15000
+Cluster Size, Average Coordination Number
+1, 0
+2, 1
+3, 1.33333
+4, 2
+5, 1.6
+8, 2.25
+10, 2.8
+14694, 3.65469
+
+Removed spheres: 16000
+Cluster Size, Average Coordination Number
+1, 0
+2, 1
+3, 1.33333
+4, 2
+5, 2.4
+6, 1.66667
+13600, 3.44897
+
+Removed spheres: 17000
+Cluster Size, Average Coordination Number
+1, 0
+2, 1
+3, 1.33333
+4, 2
+5, 2
+6, 2
+7, 1.71429
+8, 2
+9, 2.44444
+10, 1.8
+11, 2.72727
+14, 2.42857
+18, 2.66667
+12351, 3.22257
+
+Removed spheres: 18000
+Cluster Size, Average Coordination Number
+1, 0
+2, 1
+3, 1.33333
+4, 1.5
+5, 1.6
+6, 1.66667
+7, 1.71429
+8, 1.75
+9, 2.22222
+10, 2
+12, 2.66667
+14, 2.28571
+15, 2
+45, 2.88889
+11058, 3.06547
+
+Removed spheres: 19000
+Cluster Size, Average Coordination Number
+1, 0
+2, 1
+3, 1.33333
+4, 1.5
+5, 1.6
+6, 2.33333
+7, 2
+8, 2.25
+9, 2.22222
+10, 1.8
+11, 2
+12, 2.66667
+14, 3
+16, 2.125
+22, 2.90909
+24, 2.58333
+25, 2.08
+27, 2.37037
+29, 2.62069
+43, 2.88372
+66, 2.75758
+9367, 2.84296
+
+Removed spheres: 20000
+Cluster Size, Average Coordination Number
+1, 0
+2, 1
+3, 1.33333
+4, 3
+5, 2
+6, 2.66667
+7, 2.28571
+8, 2
+9, 2
+10, 2.4
+11, 2.54545
+12, 2
+13, 2.46154
+14, 2.42857
+15, 2.26667
+16, 2.875
+17, 2.23529
+18, 2.11111
+20, 2.4
+21, 2.19048
+22, 2.72727
+23, 2.86957
+24, 2.08333
+28, 2
+37, 2.54054
+43, 2.60465
+49, 2.53061
+52, 2.5
+65, 2.70769
+80, 2.625
+83, 2.77108
+7259, 2.73784
+
+Removed spheres: 21000
+Cluster Size, Average Coordination Number
+1, 0
+2, 1
+3, 2
+4, 1.5
+5, 1.6
+6, 2
+7, 1.71429
+8, 1.75
+9, 1.77778
+10, 2
+11, 2.18182
+12, 1.83333
+13, 1.84615
+14, 2.57143
+15, 2.13333
+16, 2.125
+17, 2.35294
+18, 2.33333
+19, 2.52632
+20, 2.4
+21, 3.33333
+22, 2.36364
+23, 2.17391
+24, 2.5
+26, 2.15385
+27, 2.2963
+28, 2.35714
+29, 2.62069
+30, 2.6
+31, 2.58065
+32, 2.1875
+40, 2.6
+41, 2.53659
+48, 2.33333
+49, 2.44898
+50, 2.52
+55, 2.54545
+59, 2.74576
+65, 2.76923
+68, 2.61765
+70, 2.57143
+81, 2.44444
+161, 2.53416
+180, 2.4
+235, 2.59574
+289, 2.46367
+299, 2.52174
+1381, 2.57784
+2061, 2.61038
+
+Removed spheres: 22000
+Cluster Size, Average Coordination Number
+1, 0
+2, 1
+3, 2
+4, 2
+5, 2
+6, 1.66667
+7, 1.71429
+8, 1.75
+9, 2.22222
+10, 2.2
+11, 2.90909
+12, 2
+13, 2.30769
+14, 2.14286
+15, 2.4
+16, 2
+17, 2.11765
+18, 2.33333
+19, 2.73684
+20, 2.3
+21, 2.95238
+22, 2.45455
+23, 2.08696
+24, 2.08333
+25, 2
+26, 2.30769
+27, 2.22222
+28, 2.35714
+29, 2.41379
+30, 2.46667
+31, 2.32258
+33, 2.66667
+34, 2.17647
+35, 2.62857
+36, 2.44444
+37, 2.64865
+41, 2.34146
+42, 2.38095
+43, 2.55814
+44, 2.45455
+46, 2.34783
+48, 2.375
+49, 2.69388
+51, 2.31373
+54, 2.66667
+55, 2.36364
+56, 2.64286
+58, 2.48276
+64, 2.3125
+65, 2.30769
+72, 2.61111
+73, 2.52055
+80, 2.55
+83, 2.45783
+85, 2.35294
+91, 2.30769
+104, 2.44231
+107, 2.74766
+111, 2.45045
+115, 2.67826
+118, 2.38983
+289, 2.47751
+531, 2.59134
+
+Removed spheres: 23000
+Cluster Size, Average Coordination Number
+1, 0
+2, 1
+3, 1.33333
+4, 1.5
+5, 1.6
+6, 1.66667
+7, 1.71429
+8, 2
+9, 2.44444
+10, 2
+11, 1.81818
+12, 1.83333
+13, 2
+14, 2.28571
+15, 2
+16, 2.25
+17, 1.88235
+18, 2.55556
+19, 2.21053
+20, 2.6
+21, 2.38095
+23, 2.34783
+24, 2.16667
+25, 2.96
+26, 3
+29, 2.48276
+30, 2.46667
+32, 2.625
+33, 2.30303
+34, 2.47059
+35, 2.11429
+36, 2.38889
+37, 2.16216
+38, 2.10526
+39, 2.46154
+40, 2.65
+41, 2.63415
+42, 2.38095
+44, 2.72727
+45, 2.44444
+46, 2.30435
+53, 2.11321
+63, 2.34921
+65, 2.21538
+83, 2.6747
+99, 2.50505
+112, 2.48214
+155, 2.34839
+
+Removed spheres: 24000
+Cluster Size, Average Coordination Number
+1, 0
+2, 1
+3, 1.33333
+4, 2
+5, 2
+6, 1.66667
+7, 1.71429
+8, 2.5
+9, 2
+10, 2.4
+11, 2
+12, 2.5
+13, 1.84615
+14, 1.85714
+15, 2.4
+16, 2
+17, 2.23529
+18, 2
+19, 2.10526
+20, 2.4
+21, 2.28571
+22, 2.54545
+23, 2.6087
+24, 2.25
+25, 2.48
+26, 2.53846
+28, 2.14286
+30, 2.46667
+31, 2.25806
+32, 2.1875
+33, 2.12121
+34, 2.41176
+43, 2.13953
+
+Removed spheres: 25000
+Cluster Size, Average Coordination Number
+1, 0
+2, 1
+3, 1.33333
+4, 1.5
+5, 2.4
+6, 1.66667
+7, 2
+8, 2
+9, 2.22222
+10, 2.2
+11, 2
+12, 2.33333
+13, 2.30769
+14, 1.85714
+15, 2.66667
+16, 2.25
+17, 1.88235
+18, 3.22222
+21, 2
+22, 2.36364
+23, 2
+27, 2.44444
+37, 2.27027
+
+Removed spheres: 26000
+Cluster Size, Average Coordination Number
+1, 0
+2, 1
+3, 1.33333
+4, 1.5
+5, 1.6
+6, 1.66667
+7, 2
+8, 2
+9, 1.77778
+10, 2.4
+11, 2.18182
+12, 2.16667
+13, 1.84615
+14, 2
+16, 2
+17, 2.47059
+20, 2.1
+21, 2.47619
+
+Removed spheres: 27000
+Cluster Size, Average Coordination Number
+1, 0
+2, 1
+3, 1.33333
+4, 2.5
+5, 1.6
+6, 1.66667
+7, 2
+8, 2.25
+11, 2
+12, 1.83333
+
+Removed spheres: 28000
+Cluster Size, Average Coordination Number
+1, 0
+2, 1
+3, 1.33333
+4, 1.5
+5, 1.6
+6, 1.66667
+
+Removed spheres: 29000
+Cluster Size, Average Coordination Number
+1, 0
+2, 1
+3, 1.33333
+4, 1.5
+5, 2
+
+Removed spheres: 29100
+Cluster Size, Average Coordination Number
+1, 0
+2, 1
+3, 1.33333
+4, 1.5
+5, 2
+
+Removed spheres: 29200
+Cluster Size, Average Coordination Number
+1, 0
+2, 1
+3, 1.33333
+4, 2
+
+Removed spheres: 29300
+Cluster Size, Average Coordination Number
+1, 0
+2, 1
+3, 1.33333
+4, 1.5
+
+Removed spheres: 29400
+Cluster Size, Average Coordination Number
+1, 0
+2, 1
+3, 1.33333
+4, 1.5
+
+Removed spheres: 29500
+Cluster Size, Average Coordination Number
+1, 0
+2, 1
+3, 1.33333
+
+Removed spheres: 29600
+Cluster Size, Average Coordination Number
+1, 0
+2, 1
+3, 1.33333
+
+Removed spheres: 29700
+Cluster Size, Average Coordination Number
+1, 0
+2, 1
+
+Removed spheres: 29800
+Cluster Size, Average Coordination Number
+1, 0
+2, 1
+
+Removed spheres: 29900
+Cluster Size, Average Coordination Number
+1, 0
+
+Removed spheres: 30000
+Cluster Size, Average Coordination Number

@@ -2,8 +2,10 @@
 #include <iostream>
 #include <unordered_set>
 #include <queue>
-#include <random>
 #include <unordered_map>
+#include <random>
+#include <algorithm>
+#include <numeric>
 
 void Scene::addSphere(double x, double y, double z, double radius) {
     Sphere newSphere(next_id++, x, y, z, radius);
@@ -71,9 +73,7 @@ void Scene::removeRandomSpheres(int count) {
     spheres = std::move(newSpheres);
 }
 
-
-
-std::vector<std::vector<int>> Scene::findClusters() {
+std::vector<std::vector<int>> Scene::findClusters() const {
     std::vector<std::vector<int>> clusters;
     std::unordered_set<int> visited;
 
@@ -96,7 +96,7 @@ std::vector<std::vector<int>> Scene::findClusters() {
             cluster.push_back(current_id);
 
             if (idToIndex.find(current_id) == idToIndex.end()) continue;
-            const auto& sphereRef = spheres[idToIndex[current_id]];
+            const auto& sphereRef = spheres.at(idToIndex.at(current_id));
 
             for (const auto& neighbor_id : sphereRef.neighbors) {
                 if (!visited.count(neighbor_id)) {
@@ -105,12 +105,10 @@ std::vector<std::vector<int>> Scene::findClusters() {
                 }
             }
         }
-        std::cout << "cluster contains " << cluster.size() << " spheres:\n";
         clusters.push_back(cluster);
     }
     return clusters;
 }
-
 
 void Scene::processClusters(int x) {
     auto clusters = findClusters();
@@ -132,7 +130,7 @@ void Scene::processClusters(int x) {
     for (auto& sphere : newSpheres) {
         std::vector<int> newNeighbors;
         for (int neighbor : sphere.neighbors) {
-            if (!toRemove.count(neighbor)) { 
+            if (!toRemove.count(neighbor)) {
                 newNeighbors.push_back(neighbor);
             }
         }
@@ -142,9 +140,42 @@ void Scene::processClusters(int x) {
     spheres = std::move(newSpheres);
 }
 
-
-
-
 void Scene::printScene() const {
-    std::cout << "Scene contains " << spheres.size() << " spheres:\n";
+    std::cout << "Scene contains " << spheres.size() << " spheres.\n";
+}
+
+double Scene::calculateAverageCoordinationNumber() const {
+    if (spheres.empty()) return 0.0;
+
+    int totalNeighbors = 0;
+    for (const auto& sphere : spheres) {
+        totalNeighbors += sphere.neighbors.size();
+    }
+
+    return static_cast<double>(totalNeighbors) / spheres.size();
+}
+
+std::unordered_map<int, double> Scene::calculateClusterCoordinationNumbers() const {
+    std::unordered_map<int, double> clusterCoordNumbers;
+    auto clusters = findClusters();
+
+    for (const auto& cluster : clusters) {
+        int clusterSize = cluster.size();
+        int totalNeighbors = 0;
+
+        for (int sphereID : cluster) {
+            auto it = std::find_if(spheres.cbegin(), spheres.cend(),
+                [&](const Sphere& s) { return s.id == sphereID; });
+
+            if (it != spheres.cend()) { 
+                totalNeighbors += it->neighbors.size();
+            }
+        }
+
+        if (!cluster.empty()) {
+            clusterCoordNumbers[clusterSize] = static_cast<double>(totalNeighbors) / cluster.size();
+        }
+    }
+
+    return clusterCoordNumbers;
 }

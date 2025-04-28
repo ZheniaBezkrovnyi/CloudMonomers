@@ -1,44 +1,89 @@
-#include <string>
-#include "Sphere.h"
+#include "Scene.h"
 #include "Point.h"
 #include <iostream>
-#include "Scene.h"
+#include <unordered_map>
+#include <fstream>
+#include <algorithm>
 
-using namespace std;
+void saveClustersDistribution(const std::unordered_map<int, int>& clusterSizes, std::ofstream& file, int removedCount) {
+    if (!file) return;
+
+    std::vector<std::pair<int, int>> sortedClusters(clusterSizes.begin(), clusterSizes.end());
+    std::sort(sortedClusters.begin(), sortedClusters.end());
+
+    file << "\nRemoved spheres: " << removedCount << "\n";
+    file << "Cluster Size, Count\n";
+    for (const auto& pair : sortedClusters) {
+        file << pair.first << ", " << pair.second << "\n";
+    }
+}
+
+void saveCoordinationNumbers(std::ofstream& file, int removedCount, double final) {
+    if (!file) return;
+
+    file << "\nRemoved spheres: " << removedCount << "\n";
+    file << "After cluster processing, " << final << "\n";
+}
+
+void saveClusterCoordinationNumbers(std::ofstream& file, int removedCount, const std::unordered_map<int, double>& clusterCoordNumbers) {
+    if (!file) return;
+
+    std::vector<std::pair<int, double>> sortedClusters(clusterCoordNumbers.begin(), clusterCoordNumbers.end());
+    std::sort(sortedClusters.begin(), sortedClusters.end());
+
+    file << "\nRemoved spheres: " << removedCount << "\n";
+    file << "Cluster Size, Average Coordination Number\n";
+    for (const auto& pair : sortedClusters) {
+        file << pair.first << ", " << pair.second << "\n"; // ÂÈÏÐÀÂËÅÍÎ: òåïåð çàïèñóþòüñÿ ÂÑ² êëàñòåðè
+    }
+}
 
 int main() {
     double radius = 0.001;
     std::string filename = "spheres_positions.txt";
-    Scene scene;
-    std::vector<Point> points = readSpherePositions(filename);
+    int totalSpheres = 30000;
+    int step = 1000;
+    int minSpheres = 1000;
 
-    for (const auto& p : points) {
-        scene.addSphere(p.x, p.y, p.z, radius);
+    std::ofstream clustersFile("clusters_distribution.txt");
+    std::ofstream coordFile("coordination_numbers.txt");
+    std::ofstream clusterCoordFile("cluster_coordination_numbers.txt");
+
+    if (!clustersFile || !coordFile || !clusterCoordFile) {
+        std::cerr << "Error opening output files.\n";
+        return 1;
     }
 
-    std::cout << "Initial scene:\n";
-    scene.printScene();
+    for (int removedCount = 0; removedCount <= totalSpheres; removedCount += step) {
+        if (totalSpheres - removedCount <= minSpheres) step = 100;
 
-    auto clusters1 = scene.findClusters();
-    std::cout << "Clusters before removal: " << clusters1.size() << "\n";
+        std::cout << "\nTesting removal of " << removedCount << " spheres...\n";
 
-    scene.removeRandomSpheres(25000);
+        Scene scene;
+        std::vector<Point> points = readSpherePositions(filename);
 
-    auto clusters2 = scene.findClusters();
-    std::cout << "Clusters after random removal: " << clusters2.size() << "\n";
+        for (const auto& p : points) {
+            scene.addSphere(p.x, p.y, p.z, radius);
+        }
 
-    int X = 3;
+        scene.removeRandomSpheres(removedCount);
 
-    scene.processClusters(X);
+        auto clusters = scene.findClusters();
+        double avgCoordFinal = scene.calculateAverageCoordinationNumber();
+        auto clusterCoordNumbers = scene.calculateClusterCoordinationNumbers();
 
-    std::cout << "\nAfter processing clusters:\n";
-    scene.printScene();
+        std::unordered_map<int, int> clusterSizeCounts;
+        for (const auto& cluster : clusters) {
+            clusterSizeCounts[cluster.size()]++;
+        }
 
-    auto clusters3 = scene.findClusters();
-    std::cout << "Remaining clusters: " << clusters3.size() << "\n";
+        saveClustersDistribution(clusterSizeCounts, clustersFile, removedCount);
+        saveCoordinationNumbers(coordFile, removedCount, avgCoordFinal);
+        saveClusterCoordinationNumbers(clusterCoordFile, removedCount, clusterCoordNumbers);
+    }
 
+    std::cout << "\nAll results saved to files.\n";
     return 0;
-
 }
 
 

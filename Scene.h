@@ -3,7 +3,7 @@
 
 #include "Sphere.h"
 #include <vector>
-#include <algorithm>
+#include <unordered_map>
 
 class Scene {
 private:
@@ -16,8 +16,11 @@ public:
     void printScene() const;
 
     void removeRandomSpheres(int count);
-    std::vector<std::vector<int>> findClusters();
+    std::vector<std::vector<int>> findClusters() const;
     void processClusters(int x);
+
+    double calculateAverageCoordinationNumber() const;
+    std::unordered_map<int, double> calculateClusterCoordinationNumbers() const;
 };
 
-#endif 
+#endif

@@ -1,0 +1,548 @@
+
+Removed spheres: 0
+Cluster Size, Count
+1, 5
+29995, 1
+
+Removed spheres: 1000
+Cluster Size, Count
+1, 5
+28995, 1
+
+Removed spheres: 2000
+Cluster Size, Count
+1, 5
+27995, 1
+
+Removed spheres: 3000
+Cluster Size, Count
+1, 6
+26994, 1
+
+Removed spheres: 4000
+Cluster Size, Count
+1, 7
+25993, 1
+
+Removed spheres: 5000
+Cluster Size, Count
+1, 7
+24993, 1
+
+Removed spheres: 6000
+Cluster Size, Count
+1, 6
+3, 1
+23991, 1
+
+Removed spheres: 7000
+Cluster Size, Count
+1, 14
+22986, 1
+
+Removed spheres: 8000
+Cluster Size, Count
+1, 13
+21987, 1
+
+Removed spheres: 9000
+Cluster Size, Count
+1, 28
+2, 1
+20970, 1
+
+Removed spheres: 10000
+Cluster Size, Count
+1, 29
+2, 3
+19965, 1
+
+Removed spheres: 11000
+Cluster Size, Count
+1, 55
+2, 2
+4, 1
+18937, 1
+
+Removed spheres: 12000
+Cluster Size, Count
+1, 68
+2, 5
+5, 1
+17917, 1
+
+Removed spheres: 13000
+Cluster Size, Count
+1, 93
+2, 9
+3, 3
+4, 1
+5, 2
+9, 1
+16857, 1
+
+Removed spheres: 14000
+Cluster Size, Count
+1, 116
+2, 17
+3, 3
+4, 1
+7, 1
+8, 1
+15822, 1
+
+Removed spheres: 15000
+Cluster Size, Count
+1, 200
+2, 21
+3, 8
+4, 3
+5, 2
+8, 1
+10, 1
+14694, 1
+
+Removed spheres: 16000
+Cluster Size, Count
+1, 236
+2, 36
+3, 16
+4, 3
+5, 4
+6, 2
+13600, 1
+
+Removed spheres: 17000
+Cluster Size, Count
+1, 307
+2, 53
+3, 25
+4, 6
+5, 3
+6, 1
+7, 4
+8, 1
+9, 3
+10, 1
+11, 1
+14, 1
+18, 1
+12351, 1
+
+Removed spheres: 18000
+Cluster Size, Count
+1, 387
+2, 74
+3, 43
+4, 16
+5, 5
+6, 7
+7, 1
+8, 2
+9, 2
+10, 2
+12, 1
+14, 1
+15, 1
+45, 1
+11058, 1
+
+Removed spheres: 19000
+Cluster Size, Count
+1, 511
+2, 127
+3, 44
+4, 18
+5, 16
+6, 10
+7, 7
+8, 7
+9, 2
+10, 3
+11, 1
+12, 1
+14, 2
+16, 1
+22, 3
+24, 2
+25, 1
+27, 1
+29, 1
+43, 1
+66, 1
+9367, 1
+
+Removed spheres: 20000
+Cluster Size, Count
+1, 673
+2, 141
+3, 73
+4, 44
+5, 14
+6, 21
+7, 15
+8, 8
+9, 4
+10, 7
+11, 4
+12, 4
+13, 2
+14, 2
+15, 2
+16, 2
+17, 2
+18, 5
+20, 2
+21, 2
+22, 1
+23, 1
+24, 1
+28, 1
+37, 1
+43, 1
+49, 1
+52, 1
+65, 1
+80, 1
+83, 1
+7259, 1
+
+Removed spheres: 21000
+Cluster Size, Count
+1, 750
+2, 219
+3, 110
+4, 51
+5, 36
+6, 24
+7, 18
+8, 12
+9, 12
+10, 11
+11, 8
+12, 11
+13, 6
+14, 4
+15, 4
+16, 3
+17, 4
+18, 1
+19, 3
+20, 2
+21, 2
+22, 2
+23, 3
+24, 2
+26, 3
+27, 2
+28, 1
+29, 3
+30, 1
+31, 3
+32, 2
+40, 1
+41, 1
+48, 1
+49, 1
+50, 1
+55, 1
+59, 1
+65, 1
+68, 1
+70, 1
+81, 1
+161, 1
+180, 1
+235, 1
+289, 1
+299, 1
+1381, 1
+2061, 1
+
+Removed spheres: 22000
+Cluster Size, Count
+1, 959
+2, 256
+3, 128
+4, 73
+5, 39
+6, 22
+7, 34
+8, 18
+9, 15
+10, 12
+11, 11
+12, 7
+13, 8
+14, 6
+15, 8
+16, 3
+17, 2
+18, 5
+19, 1
+20, 3
+21, 5
+22, 3
+23, 4
+24, 3
+25, 2
+26, 2
+27, 1
+28, 2
+29, 1
+30, 1
+31, 5
+33, 1
+34, 1
+35, 2
+36, 2
+37, 2
+41, 2
+42, 1
+43, 1
+44, 2
+46, 1
+48, 1
+49, 1
+51, 1
+54, 1
+55, 2
+56, 3
+58, 2
+64, 1
+65, 2
+72, 1
+73, 2
+80, 1
+83, 1
+85, 2
+91, 1
+104, 1
+107, 1
+111, 1
+115, 1
+118, 1
+289, 1
+531, 1
+
+Removed spheres: 23000
+Cluster Size, Count
+1, 1119
+2, 314
+3, 149
+4, 78
+5, 56
+6, 39
+7, 29
+8, 32
+9, 20
+10, 19
+11, 12
+12, 11
+13, 10
+14, 18
+15, 6
+16, 8
+17, 4
+18, 2
+19, 4
+20, 4
+21, 5
+23, 6
+24, 4
+25, 2
+26, 3
+29, 2
+30, 2
+32, 2
+33, 1
+34, 3
+35, 1
+36, 1
+37, 1
+38, 2
+39, 1
+40, 1
+41, 1
+42, 1
+44, 4
+45, 1
+46, 1
+53, 1
+63, 1
+65, 1
+83, 1
+99, 1
+112, 1
+155, 1
+
+Removed spheres: 24000
+Cluster Size, Count
+1, 1268
+2, 346
+3, 174
+4, 102
+5, 69
+6, 43
+7, 30
+8, 28
+9, 20
+10, 17
+11, 8
+12, 8
+13, 11
+14, 6
+15, 5
+16, 9
+17, 7
+18, 4
+19, 5
+20, 3
+21, 5
+22, 5
+23, 1
+24, 2
+25, 1
+26, 2
+28, 3
+30, 1
+31, 1
+32, 3
+33, 2
+34, 1
+43, 1
+
+Removed spheres: 25000
+Cluster Size, Count
+1, 1373
+2, 361
+3, 192
+4, 106
+5, 50
+6, 58
+7, 32
+8, 13
+9, 15
+10, 12
+11, 9
+12, 7
+13, 7
+14, 5
+15, 4
+16, 4
+17, 5
+18, 1
+21, 1
+22, 1
+23, 2
+27, 1
+37, 1
+
+Removed spheres: 26000
+Cluster Size, Count
+1, 1427
+2, 398
+3, 139
+4, 75
+5, 43
+6, 26
+7, 25
+8, 16
+9, 10
+10, 2
+11, 4
+12, 5
+13, 2
+14, 4
+16, 2
+17, 1
+20, 1
+21, 1
+
+Removed spheres: 27000
+Cluster Size, Count
+1, 1411
+2, 334
+3, 109
+4, 54
+5, 31
+6, 13
+7, 10
+8, 5
+11, 1
+12, 2
+
+Removed spheres: 28000
+Cluster Size, Count
+1, 1239
+2, 220
+3, 62
+4, 22
+5, 7
+6, 2
+
+Removed spheres: 29000
+Cluster Size, Count
+1, 779
+2, 91
+3, 10
+4, 1
+5, 1
+
+Removed spheres: 29100
+Cluster Size, Count
+1, 719
+2, 69
+3, 10
+4, 2
+5, 1
+
+Removed spheres: 29200
+Cluster Size, Count
+1, 674
+2, 55
+3, 4
+4, 1
+
+Removed spheres: 29300
+Cluster Size, Count
+1, 579
+2, 51
+3, 5
+4, 1
+
+Removed spheres: 29400
+Cluster Size, Count
+1, 546
+2, 19
+3, 4
+4, 1
+
+Removed spheres: 29500
+Cluster Size, Count
+1, 447
+2, 25
+3, 1
+
+Removed spheres: 29600
+Cluster Size, Count
+1, 349
+2, 18
+3, 5
+
+Removed spheres: 29700
+Cluster Size, Count
+1, 286
+2, 7
+
+Removed spheres: 29800
+Cluster Size, Count
+1, 192
+2, 4
+
+Removed spheres: 29900
+Cluster Size, Count
+1, 100
+
+Removed spheres: 30000
+Cluster Size, Count
