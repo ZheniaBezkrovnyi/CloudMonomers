@@ -4,6 +4,7 @@
 #include <unordered_map>
 #include <fstream>
 #include <algorithm>
+#include <chrono>
 
 void saveClustersDistribution(const std::unordered_map<int, int>& clusterSizes, std::ofstream& file, int removedCount) {
     if (!file) return;
@@ -42,22 +43,22 @@ int main() {
     double radius = 0.001;
     std::string filename = "spheres_positions.txt";
     int totalSpheres = 30000;
-    int step = 1000;
-    int minSpheres = 1000;
+    int step = 250;
 
     std::ofstream clustersFile("clusters_distribution.txt");
     std::ofstream coordFile("coordination_numbers.txt");
     std::ofstream clusterCoordFile("cluster_coordination_numbers.txt");
+    std::ofstream timingFile("timings.txt");
 
-    if (!clustersFile || !coordFile || !clusterCoordFile) {
+    if (!clustersFile || !coordFile || !clusterCoordFile || !timingFile) {
         std::cerr << "Error opening output files.\n";
         return 1;
     }
 
     for (int removedCount = 0; removedCount <= totalSpheres; removedCount += step) {
-        if (totalSpheres - removedCount <= minSpheres) step = 100;
-
         std::cout << "\nTesting removal of " << removedCount << " spheres...\n";
+
+        auto start = std::chrono::high_resolution_clock::now();
 
         Scene scene;
         std::vector<Point> points = readSpherePositions(filename);
@@ -80,9 +81,28 @@ int main() {
         saveClustersDistribution(clusterSizeCounts, clustersFile, removedCount);
         saveCoordinationNumbers(coordFile, removedCount, avgCoordFinal);
         saveClusterCoordinationNumbers(clusterCoordFile, removedCount, clusterCoordNumbers);
+
+        auto end = std::chrono::high_resolution_clock::now(); // Кінець часу
+        std::chrono::duration<double> elapsed = end - start;
+
+        timingFile << "Removed spheres: " << removedCount << ", Time: " << elapsed.count() << " seconds\n";
+        std::cout << "Elapsed time: " << elapsed.count() << " seconds\n";
     }
 
+    clustersFile.close();
+    coordFile.close();
+    clusterCoordFile.close();
+    timingFile.close(); // Закриваємо таймінг файл
+
     std::cout << "\nAll results saved to files.\n";
+    std::cout << "Building graphs...\n";
+    int result = system("python graphics2.py");
+    if (result != 0) {
+        std::cerr << "Error running graphics.py\n";
+    }
+    else {
+        std::cout << "Graphs generated successfully!\n";
+    }
     return 0;
 }
 
