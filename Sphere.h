@@ -10,6 +10,7 @@ struct Sphere {
     double accuracy;
     std::vector<int> neighbors;
 
+    Sphere();
     Sphere(int id, double x, double y, double z, double radius);
 
     bool isTouching(const Sphere& other) const;

@@ -35,15 +35,13 @@ void saveClusterCoordinationNumbers(std::ofstream& file, int removedCount, const
     file << "\nRemoved spheres: " << removedCount << "\n";
     file << "Cluster Size, Average Coordination Number\n";
     for (const auto& pair : sortedClusters) {
-        file << pair.first << ", " << pair.second << "\n"; // ВИПРАВЛЕНО: тепер записуються ВСІ кластери
+        file << pair.first << ", " << pair.second << "\n";
     }
 }
 
 int main() {
     double radius = 0.001;
-    std::string filename = "spheres_positions.txt";
-    int totalSpheres = 30000;
-    int step = 250;
+    std::string filename = "spheres_positions.txt"/* "monoSpheres_30000_triax_2x2x2.txt"*/;
 
     std::ofstream clustersFile("clusters_distribution.txt");
     std::ofstream coordFile("coordination_numbers.txt");
@@ -55,18 +53,37 @@ int main() {
         return 1;
     }
 
+    std::vector<Point> points = readSpherePositions(filename);
+    std::cout << "readed " << points.size() << "\n";
+
+    Scene originalScene;
+    originalScene.initCellSizeFromSpheres(radius, points.size());
+    auto start = std::chrono::high_resolution_clock::now();
+
+    for (size_t i = 0; i < points.size(); ++i) {
+        const auto& p = points[i];
+        originalScene.addSphere(p.x, p.y, p.z, radius);
+
+        if ((i + 1) % 1000 == 0 || i + 1 == points.size()) {
+            auto now = std::chrono::high_resolution_clock::now();
+            std::chrono::duration<double> elapsed = now - start;
+            std::cout << "Added " << (i + 1) << " spheres in " << elapsed.count() << " seconds\n";
+            start = now;
+        }
+    }
+
+    std::cout << "original scene built\n";
+    int totalSpheres = points.size();
+    int step = totalSpheres / 120;
+    std::cout << "totalSpheres " << totalSpheres << "\n";
+
+
     for (int removedCount = 0; removedCount <= totalSpheres; removedCount += step) {
         std::cout << "\nTesting removal of " << removedCount << " spheres...\n";
 
         auto start = std::chrono::high_resolution_clock::now();
 
-        Scene scene;
-        std::vector<Point> points = readSpherePositions(filename);
-
-        for (const auto& p : points) {
-            scene.addSphere(p.x, p.y, p.z, radius);
-        }
-
+        Scene scene = originalScene;
         scene.removeRandomSpheres(removedCount);
 
         auto clusters = scene.findClusters();
@@ -82,7 +99,7 @@ int main() {
         saveCoordinationNumbers(coordFile, removedCount, avgCoordFinal);
         saveClusterCoordinationNumbers(clusterCoordFile, removedCount, clusterCoordNumbers);
 
-        auto end = std::chrono::high_resolution_clock::now(); // Кінець часу
+        auto end = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed = end - start;
 
         timingFile << "Removed spheres: " << removedCount << ", Time: " << elapsed.count() << " seconds\n";
@@ -92,7 +109,7 @@ int main() {
     clustersFile.close();
     coordFile.close();
     clusterCoordFile.close();
-    timingFile.close(); // Закриваємо таймінг файл
+    timingFile.close();
 
     std::cout << "\nAll results saved to files.\n";
     std::cout << "Building graphs...\n";
@@ -103,6 +120,7 @@ int main() {
     else {
         std::cout << "Graphs generated successfully!\n";
     }
+
     return 0;
 }
 

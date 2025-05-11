@@ -3,361 +3,361 @@ Removed spheres: 0
 After cluster processing, 7.18987
 
 Removed spheres: 250
-After cluster processing, 7.12955
+After cluster processing, 7.13224
 
 Removed spheres: 500
-After cluster processing, 7.07024
+After cluster processing, 7.06841
 
 Removed spheres: 750
-After cluster processing, 7.00896
+After cluster processing, 7.00889
 
 Removed spheres: 1000
-After cluster processing, 6.94731
+After cluster processing, 6.95428
 
 Removed spheres: 1250
-After cluster processing, 6.8887
+After cluster processing, 6.89391
 
 Removed spheres: 1500
-After cluster processing, 6.8266
+After cluster processing, 6.82884
 
 Removed spheres: 1750
-After cluster processing, 6.76892
+After cluster processing, 6.77168
 
 Removed spheres: 2000
-After cluster processing, 6.7115
+After cluster processing, 6.7125
 
 Removed spheres: 2250
-After cluster processing, 6.65333
+After cluster processing, 6.65168
 
 Removed spheres: 2500
-After cluster processing, 6.58524
+After cluster processing, 6.58982
 
 Removed spheres: 2750
-After cluster processing, 6.53196
+After cluster processing, 6.53336
 
 Removed spheres: 3000
-After cluster processing, 6.48719
+After cluster processing, 6.47407
 
 Removed spheres: 3250
-After cluster processing, 6.40232
+After cluster processing, 6.41473
 
 Removed spheres: 3500
-After cluster processing, 6.3483
+After cluster processing, 6.3477
 
 Removed spheres: 3750
-After cluster processing, 6.28968
+After cluster processing, 6.29097
 
 Removed spheres: 4000
-After cluster processing, 6.22208
+After cluster processing, 6.22369
 
 Removed spheres: 4250
-After cluster processing, 6.16652
+After cluster processing, 6.17196
 
 Removed spheres: 4500
-After cluster processing, 6.1182
+After cluster processing, 6.11451
 
 Removed spheres: 4750
-After cluster processing, 6.04507
+After cluster processing, 6.0495
 
 Removed spheres: 5000
-After cluster processing, 5.9848
+After cluster processing, 5.98056
 
 Removed spheres: 5250
-After cluster processing, 5.9242
+After cluster processing, 5.93398
 
 Removed spheres: 5500
-After cluster processing, 5.872
+After cluster processing, 5.87135
 
 Removed spheres: 5750
-After cluster processing, 5.80932
+After cluster processing, 5.82012
 
 Removed spheres: 6000
-After cluster processing, 5.757
+After cluster processing, 5.75558
 
 Removed spheres: 6250
-After cluster processing, 5.68362
+After cluster processing, 5.70291
 
 Removed spheres: 6500
-After cluster processing, 5.63872
+After cluster processing, 5.61123
 
 Removed spheres: 6750
-After cluster processing, 5.57738
+After cluster processing, 5.58288
 
 Removed spheres: 7000
-After cluster processing, 5.52096
+After cluster processing, 5.50226
 
 Removed spheres: 7250
-After cluster processing, 5.44615
+After cluster processing, 5.45547
 
 Removed spheres: 7500
-After cluster processing, 5.39716
+After cluster processing, 5.39049
 
 Removed spheres: 7750
-After cluster processing, 5.31622
+After cluster processing, 5.34301
 
 Removed spheres: 8000
-After cluster processing, 5.27627
+After cluster processing, 5.28864
 
 Removed spheres: 8250
-After cluster processing, 5.20193
+After cluster processing, 5.20828
 
 Removed spheres: 8500
-After cluster processing, 5.16242
+After cluster processing, 5.14586
 
 Removed spheres: 8750
-After cluster processing, 5.09816
+After cluster processing, 5.08508
 
 Removed spheres: 9000
-After cluster processing, 5.03981
+After cluster processing, 5.0279
 
 Removed spheres: 9250
-After cluster processing, 4.98525
+After cluster processing, 4.98169
 
 Removed spheres: 9500
-After cluster processing, 4.91902
+After cluster processing, 4.90673
 
 Removed spheres: 9750
-After cluster processing, 4.85314
+After cluster processing, 4.84296
 
 Removed spheres: 10000
-After cluster processing, 4.805
+After cluster processing, 4.7837
 
 Removed spheres: 10250
-After cluster processing, 4.74471
+After cluster processing, 4.76213
 
 Removed spheres: 10500
-After cluster processing, 4.66605
+After cluster processing, 4.68903
 
 Removed spheres: 10750
-After cluster processing, 4.61797
+After cluster processing, 4.60509
 
 Removed spheres: 11000
-After cluster processing, 4.54937
+After cluster processing, 4.55
 
 Removed spheres: 11250
-After cluster processing, 4.49077
+After cluster processing, 4.49483
 
 Removed spheres: 11500
-After cluster processing, 4.46314
+After cluster processing, 4.43578
 
 Removed spheres: 11750
-After cluster processing, 4.3691
+After cluster processing, 4.37227
 
 Removed spheres: 12000
-After cluster processing, 4.31656
+After cluster processing, 4.30511
 
 Removed spheres: 12250
-After cluster processing, 4.22501
+After cluster processing, 4.24034
 
 Removed spheres: 12500
-After cluster processing, 4.18423
+After cluster processing, 4.18869
 
 Removed spheres: 12750
-After cluster processing, 4.1142
+After cluster processing, 4.17217
 
 Removed spheres: 13000
-After cluster processing, 4.06965
+After cluster processing, 4.08329
 
 Removed spheres: 13250
-After cluster processing, 4.0357
+After cluster processing, 4.02627
 
 Removed spheres: 13500
-After cluster processing, 3.95636
+After cluster processing, 3.972
 
 Removed spheres: 13750
-After cluster processing, 3.88295
+After cluster processing, 3.92012
 
 Removed spheres: 14000
-After cluster processing, 3.85038
+After cluster processing, 3.83937
 
 Removed spheres: 14250
-After cluster processing, 3.77816
+After cluster processing, 3.77994
 
 Removed spheres: 14500
-After cluster processing, 3.71032
+After cluster processing, 3.70852
 
 Removed spheres: 14750
-After cluster processing, 3.66151
+After cluster processing, 3.66282
 
 Removed spheres: 15000
-After cluster processing, 3.5996
+After cluster processing, 3.60893
 
 Removed spheres: 15250
-After cluster processing, 3.51471
+After cluster processing, 3.52027
 
 Removed spheres: 15500
-After cluster processing, 3.4709
+After cluster processing, 3.44441
 
 Removed spheres: 15750
-After cluster processing, 3.39382
+After cluster processing, 3.41277
 
 Removed spheres: 16000
-After cluster processing, 3.36557
+After cluster processing, 3.35671
 
 Removed spheres: 16250
-After cluster processing, 3.30909
+After cluster processing, 3.31782
 
 Removed spheres: 16500
-After cluster processing, 3.24119
+After cluster processing, 3.23556
 
 Removed spheres: 16750
-After cluster processing, 3.19079
+After cluster processing, 3.17132
 
 Removed spheres: 17000
-After cluster processing, 3.09431
+After cluster processing, 3.15415
 
 Removed spheres: 17250
-After cluster processing, 3.04863
+After cluster processing, 3.07247
 
 Removed spheres: 17500
-After cluster processing, 3.00496
+After cluster processing, 2.98064
 
 Removed spheres: 17750
-After cluster processing, 2.95167
+After cluster processing, 2.90384
 
 Removed spheres: 18000
-After cluster processing, 2.85383
+After cluster processing, 2.8565
 
 Removed spheres: 18250
-After cluster processing, 2.83626
+After cluster processing, 2.81617
 
 Removed spheres: 18500
-After cluster processing, 2.75235
+After cluster processing, 2.75652
 
 Removed spheres: 18750
-After cluster processing, 2.72302
+After cluster processing, 2.73244
 
 Removed spheres: 19000
-After cluster processing, 2.64055
+After cluster processing, 2.61764
 
 Removed spheres: 19250
-After cluster processing, 2.59814
+After cluster processing, 2.56112
 
 Removed spheres: 19500
-After cluster processing, 2.49943
+After cluster processing, 2.49886
 
 Removed spheres: 19750
-After cluster processing, 2.44917
+After cluster processing, 2.48156
 
 Removed spheres: 20000
-After cluster processing, 2.394
+After cluster processing, 2.3928
 
 Removed spheres: 20250
-After cluster processing, 2.33087
+After cluster processing, 2.35056
 
 Removed spheres: 20500
-After cluster processing, 2.27284
+After cluster processing, 2.27179
 
 Removed spheres: 20750
-After cluster processing, 2.1987
+After cluster processing, 2.23373
 
 Removed spheres: 21000
-After cluster processing, 2.18578
+After cluster processing, 2.16178
 
 Removed spheres: 21250
-After cluster processing, 2.09051
+After cluster processing, 2.12206
 
 Removed spheres: 21500
-After cluster processing, 2.06188
+After cluster processing, 2.04847
 
 Removed spheres: 21750
-After cluster processing, 1.98594
+After cluster processing, 1.98109
 
 Removed spheres: 22000
-After cluster processing, 1.91475
+After cluster processing, 1.91225
 
 Removed spheres: 22250
-After cluster processing, 1.82426
+After cluster processing, 1.8609
 
 Removed spheres: 22500
-After cluster processing, 1.76213
+After cluster processing, 1.7976
 
 Removed spheres: 22750
-After cluster processing, 1.70566
+After cluster processing, 1.73572
 
 Removed spheres: 23000
-After cluster processing, 1.70514
+After cluster processing, 1.66114
 
 Removed spheres: 23250
-After cluster processing, 1.62607
+After cluster processing, 1.63259
 
 Removed spheres: 23500
-After cluster processing, 1.53846
+After cluster processing, 1.58462
 
 Removed spheres: 23750
-After cluster processing, 1.48256
+After cluster processing, 1.48768
 
 Removed spheres: 24000
-After cluster processing, 1.449
+After cluster processing, 1.44567
 
 Removed spheres: 24250
-After cluster processing, 1.37217
+After cluster processing, 1.38887
 
 Removed spheres: 24500
-After cluster processing, 1.324
+After cluster processing, 1.32
 
 Removed spheres: 24750
-After cluster processing, 1.25638
+After cluster processing, 1.25181
 
 Removed spheres: 25000
-After cluster processing, 1.2264
+After cluster processing, 1.1872
 
 Removed spheres: 25250
-After cluster processing, 1.12884
+After cluster processing, 1.11621
 
 Removed spheres: 25500
-After cluster processing, 1.08711
+After cluster processing, 1.08044
 
 Removed spheres: 25750
-After cluster processing, 1.02024
+After cluster processing, 1.02118
 
 Removed spheres: 26000
-After cluster processing, 0.9235
+After cluster processing, 0.9645
 
 Removed spheres: 26250
-After cluster processing, 0.895467
+After cluster processing, 0.9072
 
 Removed spheres: 26500
-After cluster processing, 0.868
+After cluster processing, 0.881714
 
 Removed spheres: 26750
-After cluster processing, 0.804308
+After cluster processing, 0.768
 
 Removed spheres: 27000
-After cluster processing, 0.678
+After cluster processing, 0.708
 
 Removed spheres: 27250
-After cluster processing, 0.678545
+After cluster processing, 0.653818
 
 Removed spheres: 27500
-After cluster processing, 0.58
+After cluster processing, 0.592
 
 Removed spheres: 27750
-After cluster processing, 0.552889
+After cluster processing, 0.505778
 
 Removed spheres: 28000
-After cluster processing, 0.499
+After cluster processing, 0.485
 
 Removed spheres: 28250
-After cluster processing, 0.430857
+After cluster processing, 0.454857
 
 Removed spheres: 28500
-After cluster processing, 0.332
+After cluster processing, 0.306667
 
 Removed spheres: 28750
-After cluster processing, 0.28
+After cluster processing, 0.2848
 
 Removed spheres: 29000
-After cluster processing, 0.294
+After cluster processing, 0.24
 
 Removed spheres: 29250
-After cluster processing, 0.176
+After cluster processing, 0.149333
 
 Removed spheres: 29500
-After cluster processing, 0.12
+After cluster processing, 0.116
 
 Removed spheres: 29750
-After cluster processing, 0.056
+After cluster processing, 0.048
 
 Removed spheres: 30000
 After cluster processing, 0
